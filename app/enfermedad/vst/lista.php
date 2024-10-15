@@ -1,6 +1,6 @@
 <?php require '../../../cfg/base.php'; ?>
 <?php
-var_dump($_POST);
+//var_dump($_POST);
 
 $row = $menfermedad->lista() ?>
 <?php if(count($row)>0): ?>

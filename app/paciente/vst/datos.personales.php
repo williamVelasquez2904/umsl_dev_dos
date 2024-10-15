@@ -1,5 +1,5 @@
 <?php require '../../../cfg/base.php'; 
-$row = $mpaciente->poride($pac_ide);
+$row = $mpaciente->poride($pac_ide); 
 $row_fich = $mpermfich->poride(1);
 ?>
 <div class="col-sm-12 widget-container-span ui-sortable" id="ficha-<?php echo $row_fich[0]->fich_ide ?>-link">
@@ -27,9 +27,9 @@ $row_fich = $mpermfich->poride(1);
 						<table class="table table-bordered">
 							<tr>
 								<th class="active text-right">Número de Identificación:</th>
-								<td><?php echo $row[0]->clien_tipcli.'-'.$row[0]->clien_numiden ?></td>
+								<td><?php //echo $row[0]->clien_tipcli.'-'.$row[0]->clien_numiden ?></td>
 								<th class="active text-right">Apellidos y Nombres:</th>
-								<td><?php echo $row[0]->clien_ide.'- '.$row[0]->clien_apelli1.' '.$row[0]->clien_apelli2.', '.$row[0]->clien_nombre1.' '.$row[0]->clien_nombre2 ?></td>
+								<td><?php //echo $row[0]->clien_ide.'- '.$row[0]->clien_apelli1.' '.$row[0]->clien_apelli2.', '.$row[0]->clien_nombre1.' '.$row[0]->clien_nombre2 ?></td>
 							</tr>
 							<tr>
 								<th class="active text-right">Fecha de Nacimiento:</th>

@@ -3,7 +3,7 @@
 	<div class="form-group">
 		<label for="" class="label control-label col-sm-12 bolder">[07-10-2024. Patient] - Buscar Paciente:</label>
 		<div class="col-sm-9">
-			<input type="text" class="form-control" id="buscarpaciente" name="clien">
+			<input type="text" class="form-control" id="buscarpaciente" name="pac">
 		</div>
 		<div class="col-sm-3">
 			<button class="btn btn-primary btn-sm"><i class="fa fa-search"></i> Buscar o Registrar</button>
@@ -67,7 +67,7 @@
 					if(data.trim()=='no') {
 						load('vst-patient-insert','','.perfil');
 					} else {
-						load('vst-patient-datos.personales','clien_ide='+data.trim(),'.perfil');
+						load('vst-patient-datos.personales','pac_ide='+data.trim(),'.perfil');
 					}
 				})
 			},

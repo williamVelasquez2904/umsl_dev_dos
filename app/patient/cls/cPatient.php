@@ -1,6 +1,6 @@
 <?php class cPatient extends mPatient {
 	
-	public function buscar() {
+	public function buscar_dos() {
 		extract($_POST);
 		$expd_clien = explode(' - ',$clien);
 		$pac_ide = $expd_clien[0];
@@ -11,6 +11,19 @@
 			$rt='no';
 		}
 		return $rt;
+	} 
+
+	public function buscar() {
+		extract($_POST);
+		$expd_pac = explode(' - ',$pac);
+		$pac_ide = $expd_pac[0];
+		$row = $this->poride($pac_ide);
+		if(count($row)>0) {
+			$rt = $row[0]->pac_ide;
+		} else {
+			$rt='no';
+		}
+		return $rt; 
 	}
 
 	public function cinsert() {
