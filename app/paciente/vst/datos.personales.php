@@ -1,5 +1,5 @@
 <?php require '../../../cfg/base.php'; 
-$row = $mpaciente->poride($clien_ide);
+$row = $mpaciente->poride($pac_ide);
 $row_fich = $mpermfich->poride(1);
 ?>
 <div class="col-sm-12 widget-container-span ui-sortable" id="ficha-<?php echo $row_fich[0]->fich_ide ?>-link">
