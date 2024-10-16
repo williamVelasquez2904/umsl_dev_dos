@@ -50,10 +50,10 @@
 
 			<div class="clearfix"></div>
 
-<!-- 			<div class="space-2"></div>
+			<div class="space-2"></div>
 
-			<img src="img/logo_idt.png" align="" class="pull-left" height="80 px">	
- -->
+			<img src="img/logo_umsl_dos.png" align="" class="pull-left" height="80 px">	
+ 
 			<h2 class="pull-left" style="padding-left:30px">
 
 				<span class="white"><?php echo "UNIDAD MEDICA SAN LUIS" ?></span>
@@ -183,7 +183,7 @@
 
 
 
-										<div class="toolbar clearfix" style="background:#b0c2d5">
+										<div class="toolbar clearfix" style="background:#3298b9">
 
 											<div>
 
