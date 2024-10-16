@@ -23,7 +23,7 @@ $row_fich = $mpermfich->poride(1);
 					<div class="table-responsive">
 						<table class="table table-bordered">
 							<tr>
-								<th class="active text-right">Número de Identificación:</th>
+								<th class="active text-right">Número de Identificación......:</th>
 								<td><?php echo $row[0]->pac_numiden ?></td>
 								<th class="active text-right">Razón Social o Nombre:</th>
 								<td><?php echo $row[0]->pac_nombre.' '.$row[0]->pac_apellido ?></td>
