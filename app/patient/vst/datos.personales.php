@@ -33,6 +33,19 @@ $row_fich = $mpermfich->poride(1);
 								<td><?php echo date('d-m-Y',strtotime($row[0]->pac_fecnac)); ?></td>
 							</tr>
 
+							<tr>
+								<th class="active text-right">Sexo:</th>
+								<td>
+									<select class="form-control chosen" name="sexo" id="sexo">
+										<option value=1>Masculino</option>
+										<option value=2>FEmenino</option>
+									</select>
+									
+								</td>
+							</tr>
+
+
+
 	
 
 						</table>
