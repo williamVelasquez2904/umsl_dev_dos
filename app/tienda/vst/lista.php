@@ -4,7 +4,7 @@
 	<div class="table-responsive">
 		<table class="table table-hover table-bordered">
 			<thead>
-				<tr>
+				<tr> 
 					<th>R.I.F.</th>
 					<th>Nombre de la Razón Social</th>
 					<th>Telefono</th>

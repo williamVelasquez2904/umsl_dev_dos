@@ -14,9 +14,9 @@ $archivos = array(
 		'permisos'  =>array('mPermisos','cPermisos'),
 		'permfich'  =>array('mPermfich','cPermfich'),
 		'profesion' =>array('mProfesion','cProfesion'),
-		'patient'   =>array('mPatient','cPatient'),		
+		'patient'   =>array('mPatient','cPatient'),
 		'paciente'  =>array('mPaciente','cPaciente'),
-		'compania'    =>array('mCompania','cCompania'),		
+		'compania'  =>array('mCompania','cCompania'),		
 		'tienda'    =>array('mTienda','cTienda'),
 		'auditoria' =>array('mAuditoria','cAuditoria')
 	);
