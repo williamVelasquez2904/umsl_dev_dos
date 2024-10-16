@@ -16,10 +16,11 @@ $archivos = array(
 		'profesion' =>array('mProfesion','cProfesion'),
 		'patient'   =>array('mPatient','cPatient'),		
 		'paciente'  =>array('mPaciente','cPaciente'),
+		'compania'    =>array('mCompania','cCompania'),		
 		'tienda'    =>array('mTienda','cTienda'),
 		'auditoria' =>array('mAuditoria','cAuditoria')
 	);
-# Instanciaci贸n de clases
+# Instanciacin de clases
 $fn = new Funciones();
 foreach($archivos as $ind=>$val) {
 	foreach($val as $file) {
