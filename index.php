@@ -5,7 +5,7 @@ $rowt=$mtienda->poride($_SESSION['s_usua_tienda']); ?>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>U.M.S.L</title>
+		<title>Unidad Medica San Luis</title>
 		<meta name="description" content="overview &amp; stats" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="img/logo_umsl.png" type="image/x-icon">
@@ -27,7 +27,7 @@ $rowt=$mtienda->poride($_SESSION['s_usua_tienda']); ?>
 			<div class="col-sm-12" style="background:#<?php echo $rowt[0]->empresa_bg_encabezado ?>">
 				<div class="clearfix"></div>
 				<div class="space-2"></div>
-				<img src="img/logo_umsl_1.png" align="" class="pull-left" height="80 px">	
+				<img src="img/logo_umsl.png" align="" class="pull-left" height="80 px">	
 				<h2 class="pull-left" style="padding-left:30px">
 					<span class="<?php echo $rowt[0]->empresa_col_nombre ?>"><?php echo "GESTIÓN DE PACIENTES" ?></span>
 					<div class="space-0"></div>

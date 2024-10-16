@@ -10,7 +10,7 @@
 
 		<meta charset="utf-8" />
 
-		<title>UMSL - Login</title>
+		<title>Unidad Medica San Luis - Login</title>
 
 
 
@@ -18,7 +18,7 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link rel="shortcut icon" href="../../../img/logo_idt.png" type="image/x-icon">
+		<link rel="shortcut icon" href="../../../img/logo.png" type="image/x-icon">
 
 		<?php require '../../../css/ace.php'; ?>
 
@@ -56,7 +56,7 @@
  -->
 			<h2 class="pull-left" style="padding-left:30px">
 
-				<span class="white"><?php echo "UNIDAD MEDICA SAN LUIS." ?></span>
+				<span class="white"><?php echo "UNIDAD MEDICA SAN LUIS" ?></span>
 
 				<div class="space-0"></div>
 
