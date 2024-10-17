@@ -36,12 +36,10 @@ $row_fich = $mpermfich->poride(1);
 							<tr>
 								<th class="active text-right">Sexo:</th>
 								<td>
-									<select class="form-control chosen" name="sexo" id="sexo">
-										<option value=1>Masculino</option>
-										<option value=2>FEmenino</option>
-									</select>
+								<?php echo funciones::getGenero($row[0]->pac_sexo); ?>
 									
 								</td>
+
 							</tr>
 
 

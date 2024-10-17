@@ -26,12 +26,22 @@
 				</div>
 			</div>
 
-			<div class="form-group col-sm-4">
+			<div class="form-group col-sm-2">
 				<label for="" class="label control-label col-sm-12 bolder">Fecha de Nacimiento:</label>
 				<div class="col-sm-12">
 					<input type="text" name="fnac" class="form-control fecha" value="<?php echo date('d-m-Y',strtotime($r->pac_fecnac)); ?>">
 				</div>
 			</div>
+			<div class="form-group col-sm-2">
+				<label for="" class="label control-label col-sm-12 bolder">Sexo:</label>
+				<div class="col-sm-12">
+						<select class="form-control chosen" name="sexo" id="sexo">
+							<option value=1>Masculino</option>
+							<option value=2>FEmenino</option>
+						</select>
+				</div>
+			</div>
+								
 			<div class="clearfix"></div>
 
 

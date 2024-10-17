@@ -43,6 +43,12 @@
 	function check($val1,$val2) {
 		return (!strcmp($val1,$val2)) ? 'checked' : null;
 	}
+	static function getGenero($gen) {
+		//var_dump($gen);
+		if ($gen == 1) return "Masculino";
+		if ($gen == 2) return "Femenino";
+		
+	}
 
 	static function vacio($campo,$des) {
 		return (empty($campo)) ? $des : 1;
