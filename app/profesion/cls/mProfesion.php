@@ -15,4 +15,4 @@
 		return Enlace::sql($sql,$datos,4,'res');
 	}
 
-} ?>
+} ?>  

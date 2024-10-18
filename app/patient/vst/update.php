@@ -1,4 +1,5 @@
-<?php require '../../../cfg/base.php'; ?>
+<?php require '../../../cfg/base.php';
+?>
 <?php foreach($mpatient->poride($pac_ide) as $r): ?>
 	<form action="" class="op2-pac well">
 		<div class="msj-pac"></div>
@@ -33,6 +34,9 @@
 					<input type="text" name="fnac" class="form-control fecha" value="<?php echo date('d-m-Y',strtotime($r->pac_fecnac)); ?>">
 				</div>
 			</div>
+			
+						<div class="clearfix"></div>
+
 			<div class="form-group col-sm-2">
 				<label for="" class="label control-label col-sm-12 bolder">Sexo:</label>
 				<div class="col-sm-12">
@@ -42,6 +46,26 @@
 						</select>
 				</div>
 			</div>
+
+
+
+		<div class="form-group col-sm-2">
+			<label for="" class="label control-label col-sm-12 bolder">Grado de Instruccion:</label>
+			<div class="col-sm-12" id="grado">
+				<select class="form-control chosen" title="Tienda" name="grado" id="grado">
+					<option value=""></option>
+					<?php foreach($mprofesion->lista() as $p): ?>
+						<option value="<?php echo $p->profesion_ide; ?>"
+							<?php 
+							if ($r->pac_grado_inst_ide==$p->profesion_ide) echo "selected";
+							?>
+						>
+					<?php echo $p->profesion_descrip; ?></option>
+					<?php endforeach; ?>
+				</select>
+			</div>
+		</div>
+
 								
 			<div class="clearfix"></div>
 
