@@ -3,6 +3,6 @@
 /js
 /lib
 /planificadores
-/sql
+sql
 .htaccess
 error_log
