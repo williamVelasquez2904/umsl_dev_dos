@@ -36,9 +36,9 @@ $row_fich = $mpermfich->poride(1);
 								
 							</tr>
 							<tr>
-								<th class="active text-right">Sexo:</th>
+								<th class="active text-right">Profesión:</th>
 								<td>
-									<?php echo funciones::getGenero($row[0]->pac_sexo); ?>
+									<?php echo $row[0]->profesion; ?>
 								</td>
 							</tr>
 
