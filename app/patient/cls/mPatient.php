@@ -79,12 +79,13 @@
 
 	public function update() {
 		extract($_POST);
-		$sql = "SELECT sf_patient(?,?,?,?,?,?,?) AS res";
+		$sql = "SELECT sf_patient(?,?,?,?,?,?,?,?) AS res";
 		$datos = array($pac_ide,
 			$ced, 
 			Funciones::may($nom),
 			Funciones::may($ape),
 			date('Y-m-d',strtotime($fnac)),
+			$sexo,
 			2,
 			$_SESSION['s_usua_ide']
 		);

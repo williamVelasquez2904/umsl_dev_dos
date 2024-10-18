@@ -5,21 +5,22 @@
 		<fieldset><legend>Datos del Paciente</legend>	
 
 
-			<div class="form-group col-sm-4">
+			<div class="form-group col-sm-2
+			">
 				<label for="" class="label control-label col-sm-12 bolder">Cédula:</label>
 				<div class="col-sm-12">
 					<input type="text" name="ced" class="form-control" value="<?php echo $r->pac_numiden ?>">
 				</div>
 			</div>
 
-			<div class="form-group col-sm-4">
+			<div class="form-group col-sm-3">
 				<label for="" class="label control-label col-sm-12 bolder">Nombre:</label>
 				<div class="col-sm-12">
 					<input type="text" name="nom" class="form-control" value="<?php echo $r->pac_nombre ?>">
 				</div>
 			</div>
 
-			<div class="form-group col-sm-4">
+			<div class="form-group col-sm-3">
 				<label for="" class="label control-label col-sm-12 bolder">Apellido:</label>
 				<div class="col-sm-12">
 					<input type="text" name="ape" class="form-control" value="<?php echo $r->pac_apellido ?>">
@@ -37,7 +38,7 @@
 				<div class="col-sm-12">
 						<select class="form-control chosen" name="sexo" id="sexo">
 							<option value=1>Masculino</option>
-							<option value=2>FEmenino</option>
+							<option value=2>Femenino</option>
 						</select>
 				</div>
 			</div>

@@ -42,10 +42,6 @@ $row_fich = $mpermfich->poride(1);
 								</td>
 							</tr>
 
-
-
-	
-
 						</table>
 					</div>
 
