@@ -8,6 +8,7 @@ require $ruta_acceso_archivos.'cfg/funciones.php';
 # Reune todos los archivos y carpetas dentro de app
 $archivos = array(
 		'usuarios'  =>array('mUsuarios','cUsuarios'),
+		'consulta'  =>array('mConsulta','cConsulta'),		
 		'enfermedad'=>array('mEnfermedad','cEnfermedad'),
 		'tipclien'  =>array('mTipclien','cTipclien'),
 		'tipousua'  =>array('mTipousua','cTipousua'),
