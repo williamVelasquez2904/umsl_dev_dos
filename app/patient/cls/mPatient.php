@@ -1,4 +1,4 @@
-<?php class mPatient { 
+<?php class mPatient {
 
 	function __clone() {}
 	function __construct() {}

@@ -4,7 +4,7 @@
 	<div class="form-group">
 		<label for="" class="label control-label col-sm-12 bolder">Buscar Paciente:</label>
 		<div class="col-sm-9">
-			<input type="text" class="form-control" id="buscarpaciente" name="pac">
+			<input type="text" class="form-control" id="buscarpaciente" name="pac_ide">
 		</div>
 		<div class="col-sm-3">
 			<button class="btn btn-primary btn-sm"><i class="fa fa-search"></i> Buscar o Registrar</button>
@@ -29,7 +29,7 @@
 			  {
 				placeholder:tag_input.attr('placeholder'),
 				//enable typeahead by specifying the source array
-				source: [<?php foreach($row as $r): ?> "<?php echo $r->pac_ide.' - '.$r->clien_tipcli.$r->clien_numiden.' - '.$r->clien_apelli1.' '.$r->clien_apelli2.' '.$r->clien_nombre1.' '.$r->clien_nombre2.' '.$r->clien_correo; ?>", <?php endforeach; ?>]
+				source: [<?php foreach($row as $r): ?> "<?php echo $r->pac_ide.' - '.$r->pac_numiden.' - '.$r->pac_apellido.' - '.$r->pac_nombre ?>", <?php endforeach; ?>]
 			  }
 			);
 		}
@@ -70,11 +70,11 @@
 			},
 
 			submitHandler: function (form) {
-				$.post('prc-ccompra-buscar',$(formulario).serialize(),function(data){
+				$.post('prc-cpatient-buscar',$(formulario).serialize(),function(data){
 					if(data.trim()=='no') {
 						load('vst-contrato-insert','','.perfil');
 					} else {
-						load('vst-contrato-datos.personales','clien_ide='+data.trim(),'.perfil');
+						load('vst-patient-datos.personales','pac_ide='+data.trim(),'.perfil');
 						/*load('vst-contrato-insert','clien_ide='+data.trim(),'.contrato');*/
 						load('vst-contrato-listaContratos','clien_ide='+data.trim(),'.listaContratos');
 						load('vst-contrato-insertcontrato','clien_ide='+data.trim(),'.contrato');
