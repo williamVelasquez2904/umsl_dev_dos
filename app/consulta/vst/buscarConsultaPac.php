@@ -72,12 +72,11 @@
 			submitHandler: function (form) {
 				$.post('prc-cpatient-buscar',$(formulario).serialize(),function(data){
 					if(data.trim()=='no') {
-						load('vst-contrato-insert','','.perfil');
+						load('vst-consulta-insert','','.perfil');
 					} else {
 						load('vst-patient-datos.personales','pac_ide='+data.trim(),'.perfil');
-						/*load('vst-contrato-insert','clien_ide='+data.trim(),'.contrato');*/
-						load('vst-contrato-listaContratos','clien_ide='+data.trim(),'.listaContratos');
-						load('vst-contrato-insertcontrato','clien_ide='+data.trim(),'.contrato');
+						load('vst-consulta-listaConsultas','pac_ide='+data.trim(),'.listaConsultas');
+						load('vst-consulta-insertconsulta','pac_ide='+data.trim(),'.consulta');
 
 						
 					}
