@@ -14,7 +14,9 @@
 	} 
 
 	public function buscar() {
+
 		extract($_POST);
+		//var_dump($pac_ide);
 		/*
 		$expd_pac = explode(' - ',$pac);
 		$pac_ide = $expd_pac[0];
