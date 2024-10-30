@@ -12,6 +12,7 @@ $archivos = array(
 		'enfermedad'=>array('mEnfermedad','cEnfermedad'),
 		'tipclien'  =>array('mTipclien','cTipclien'),
 		'tipousua'  =>array('mTipousua','cTipousua'),
+		'motivo'  =>array('mMotivo','cMotivo'),
 		'permisos'  =>array('mPermisos','cPermisos'),
 		'permfich'  =>array('mPermfich','cPermfich'),
 		'profesion' =>array('mProfesion','cProfesion'),

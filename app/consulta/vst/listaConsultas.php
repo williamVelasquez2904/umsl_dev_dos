@@ -3,7 +3,7 @@ extract($_POST);
 var_dump($pac_ide);
 $row = $mconsulta->listaporpaciente($pac_ide);?>
 <div>
-<label for="" class="label control-label col-sm-12 bolder">Consulta del Paciente:</label>	
+<label for="" class="label control-label col-sm-12 bolder">Consultas del Paciente:</label>	
 </div>
 <?php if(count($row)>0): ?>
 <div>
