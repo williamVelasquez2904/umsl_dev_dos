@@ -16,8 +16,8 @@ var_dump($row);
 </div>
 <form action="" class="datosconsulta">
 	<div class="msj-errores" id="errores_contrato"></div>
-	<!-- Datos del producto ############### -->
-	<fieldset><legend>Datos de Contrato</legend>	
+	
+	<fieldset><legend>Datos de la Consulta</legend>	
 
 		<input type="hidden" name="clien_ide" class="form-control" value="<?php echo $clien_ide; ?>"> 
 		<input type="hidden" name="consec"    class="form-control" value="<?php echo $consecutivo; ?>"> 
