@@ -2,7 +2,7 @@
 extract($_POST);
 //se busca la Cantidad de consultas  del paciente
 $row=$mconsulta->porpac_ide($pac_ide);
-var_dump($row);
+//var_dump($row);
 
 
 ?>
@@ -19,21 +19,16 @@ var_dump($row);
 	
 	<fieldset><legend>Datos de la Consulta</legend>	
 
-		<input type="hidden" name="clien_ide" class="form-control" value="<?php echo $clien_ide; ?>"> 
-		<input type="hidden" name="consec"    class="form-control" value="<?php echo $consecutivo; ?>"> 
+		<input type="hidden" name="pac_ide" class="form-control" value="<?php echo $pac_ide; ?>"> 
 		
-		<div class="form-group col-sm-2">
-			<label for="" class="label control-label col-sm-12 bolder">Aplica para</label>
+		<div class="form-group col-sm-3">
+			<label for="" class="label control-label col-sm-12 bolder">Empresa</label>
 			<div class="col-sm-12" id="tienda">
-				<select class="form-control chosen" title="Tienda" name="tie" id="tie">
+				<select class="form-control chosen" title="Empresa" name="emp" id="emp">
 					<option value=""></option>
-					<?php foreach($mtienda->lista() as $t): ?>
-						<option value="<?php echo $t->empresa_ide; ?>"
-							<?php 
-							if ($t->empresa_ide==1) echo "selected";
-							?>
-						>
-					<?php echo $t->empresa_nombre; ?></option>
+					<?php foreach($mcompania->lista() as $c): ?>
+						<option value="<?php echo $c->compania_ide; ?>">
+					<?php echo $t->compania_nombre; ?></option>
 					<?php endforeach; ?>
 				</select>
 			</div>
@@ -50,122 +45,51 @@ var_dump($row);
 				</div>
 			</div>
 		</div>
+
 		<div class="form-group col-sm-2">
-			<label for="" class="label control-label col-sm-12 bolder">Fecha Inicio de Cobro:</label>
-			<div class="col-sm-12">
-				<div class="input-group">
-					<input type="text" name="fec_ini_cob" id="fec_ini_cob" class="fecha form-control" data-date-format="yyyy-mm-dd" value="">
-					<span class="input-group-addon">
-						<i class="icon-calendar bigger-110"></i>
-					</span>
-				</div>
-			</div>
-		</div>
-		<div class="form-group col-sm-2">
-			<label for="" class="label control-label col-sm-12 bolder">Moneda</label>
+			<label for="" class="label control-label col-sm-12 bolder">Motivo</label>
 			<div class="col-sm-12" id="mone">
-				<select class="form-control chosen" title="Moneda" name="mone" id="mone" >
-					<option value=""></option>
-					<?php foreach($mmoneda->lista() as $m): ?>
-						<option value="<?php echo $m->moneda_ide ?>"
+				<select class="form-control chosen" title="Moneda" name="mot" id="mot" >
+					
+					<?php foreach($mmotivo->lista() as $m): ?>
+						<option value="<?php echo $m->motivo_ide ?>"
 							<?php 
-							if ($m->moneda_ide==1) echo "selected";
+							if ($m->motivo_ide==1) echo "selected";
 							?>
 						>
-							<?php echo $m->moneda_ide.'-'. $m->moneda_abreviada ?></option>
+							<?php echo $m->motivo_ide.'-'. $m->motivo_descrip ?></option>
 					<?php endforeach; ?>
 				</select>
 			</div>
 		</div>		
-		<div class="form-group col-sm-2">
-			<label for="" class="label control-label col-sm-12 bolder">Monto Capital</label>
-			<div class="col-sm-12">
-				<input type="text" name="mto" class="form-control" value="">
-			</div>
-		</div>
 
-		<div class="form-group col-sm-2">
-			<label for="" class="label control-label col-sm-12 bolder">Cuotas:</label>
-			<div class="col-sm-12">
-				<input type="number" min="0" name="cuo" class="form-control" value ="">
-			</div>
-		</div>		
 		<div class="clearfix"></div>
 
+		<!--
 		<div class="form-group col-sm-4">
-			<label for="" class="label control-label col-sm-12 bolder">Banco/Tienda</label>
-			<div class="col-sm-12" id="banco_ide">
-				<select class="form-control chosen" title="Banco o Tienda" name="banco_ide" id="banco_ide" >
-					<option value=""></option>
-					<?php foreach($mbanco->lista() as $b): ?>
-						<option value="<?php echo $b->banco_ide ?>"
-						>
-						<?php echo $b->banco_descrip ?></option>
-					<?php endforeach; ?>
-				</select>
-			</div>
-		</div>
-		<div class="form-group col-sm-4">
-			<label for="" class="label control-label col-sm-12 bolder">Cuenta Bancaria</label>
+			<label for="" class="label control-label col-sm-12 bolder">Empresa</label>
 			<div class="col-sm-12" id="cuenta_ide">
-				<select class="form-control chosen" title="cuenta Bancaria" name="cuenta_ide" id="cuenta_ide" >
+				<select class="form-control chosen" title="Empresa" name="empre" id="cuenta_ide" >
 					<option value=""></option>
-					<?php foreach($mclientecuenta->cuentas_por_clien_ide($clien_ide) as $p): ?>
-						<option value="<?php echo $p->ctecue_ide ?>"
+					<?php //foreach($mpaciente_empresa->empresas_por_pac_ide($pac_ide) as $p): ?>
+						<option value="<?php //echo $p->pacemp_emp_ide ?>"
 						>
-						<?php echo $p->ctecue_cuenta ?></option>
-					<?php endforeach; ?>
+						<?php //echo $p->pacemp_empresa ?></option>
+					<?php //endforeach; ?>
 				</select>
 			</div>
-		</div>		
-		<div class="clearfix"></div>
-		<div class="form-group col-sm-2">
-			<label for="" class="label control-label col-sm-12 bolder">Frecuencia de Cuotas:</label>
-			<div class="col-sm-12" id="ser">
-				<select class="form-control chosen" name="fre" id="fre">
-					<option value="1" selected>Dias</option>
-					<option value="2">Semanal</option>
-					<option value="3">Quincenal</option>
-					<option value="4">Mensual</option>
-				</select>
-			</div>
-		</div>
-		<div class="form-group col-sm-2">
-			<label for="" class="label control-label col-sm-12 bolder">Cobrar cada cuantos Dias:</label>
-			<div class="col-sm-12">
-				<input type="number" min="0" name="dias" class="form-control" value ="">
-			</div>
-		</div>
-		
-		<div class="form-group col-sm-2">
-			<label for="" class="label control-label col-sm-12 bolder">Cantidad de Artículos:</label>
-			<div class="col-sm-12">
-				<input type="number" min="0" name="can" class="form-control" value="">
-			</div>
-		</div>
-
-
-		<div class="form-group col-sm-2">
-			<label for="" class="label control-label col-sm-12 bolder">Monto Total</label>
-			<div class="col-sm-12">
-				<input type="number" min="0" name="sdo" class="form-control" value="">
-			</div>
-		</div>
-
+		</div>		-->
 		<div class="clearfix"></div>
 
-		<div class="form-group col-sm-6">
-			<label for="" class="label control-label col-sm-12 bolder">Descripción de Artículos:</label>
-			<div class="col-sm-12">
-				<input type="text"  name="observ" class="form-control" value="">
-			</div>
-		</div>
+
 		<div class="form-group col-sm-2">
-			<label for="" class="label control-label col-sm-12 bolder">Modalidad:</label>
+			<label for="" class="label control-label col-sm-12 bolder">Resultado de la Consulta:</label>
 			<div class="col-sm-12" id="tp_mod">
 				<select class="form-control chosen" name="tp_mod" id="tp_mod">
-					<option value="0" selected>Banco</option>
-					<option value="1">Tienda</option>
+					<option value="0" selected>Por Asignar</option>
+					<option value="1">Apto</option>
+					<option value="2">Apto con limitación</option>
+					<option value="3">No Apto</option>
 				</select>
 			</div>
 		</div>		
@@ -175,7 +99,7 @@ var_dump($row);
 		<!-- Botón de acción ###########-->
 		<div class="clearfix"></div>
 		<div class="form-actions clearfix">
-			<button class="btn btn-primary btn-sm pull-right"><span class="i fa fa-check"></span> Guardar Contrato</button>
+			<button class="btn btn-primary btn-sm pull-right"><span class="i fa fa-check"></span> Guardar </button>
 		</div>
 	</fieldset>
 </form>
