@@ -28,7 +28,7 @@ $row=$mconsulta->porpac_ide($pac_ide);
 					<option value=""></option>
 					<?php foreach($mcompania->lista() as $c): ?>
 						<option value="<?php echo $c->compania_ide; ?>">
-					<?php echo $t->compania_nombre; ?></option>
+					<?php echo $c->compania_nombre; ?></option>
 					<?php endforeach; ?>
 				</select>
 			</div>

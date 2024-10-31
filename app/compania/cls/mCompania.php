@@ -4,7 +4,7 @@
 	function __construct() {}
 
 	public function lista() {
-		$sql = "SELECT * FROM tbl_compania where empresa_borrado=0";
+		$sql = "SELECT * FROM tbl_compania where compania_borrado=0";
 		return Enlace::sql($sql,'',3,'');
 	}
 
