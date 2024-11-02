@@ -19,7 +19,7 @@ $row=$mconsulta->porpac_ide($pac_ide);
 	
 	<fieldset><legend>Datos de la Consulta</legend>	
 
-		<input type="hidden" name="pac_ide" class="form-control" value="<?php echo $pac_ide; ?>"> 
+		<input type="text" name="pac_ide" class="form-control" value="<?php echo $pac_ide; ?>"> 
 		
 		<div class="form-group col-sm-3">
 			<label for="" class="label control-label col-sm-12 bolder">Empresa</label>
@@ -28,7 +28,7 @@ $row=$mconsulta->porpac_ide($pac_ide);
 					<option value=""></option>
 					<?php foreach($mcompania->lista() as $c): ?>
 						<option value="<?php echo $c->compania_ide; ?>">
-					<?php echo $c->compania_nombre; ?></option>
+					<?php echo $c->compania_ide." - ".$c->compania_nombre; ?></option>
 					<?php endforeach; ?>
 				</select>
 			</div>
@@ -203,9 +203,9 @@ $row=$mconsulta->porpac_ide($pac_ide);
 					/*alerta('.msj','danger','Seleccione Cuenta');*/
 					alert('Seleccione Cuenta Bancaria');
 				} else {
-					$.post('prc-mcontrato-insert',$(formulario).serialize(),function(data){
+					$.post('prc-mconsulta-insert',$(formulario).serialize(),function(data){
 						if(!isNaN(data)) {
-							load('vst-contrato-listaContratos','clien_ide=<?php echo $clien_ide; ?>','.listaContratos');
+							load('vst-consulta-listaConsultas','pac_ide=<?php echo $pac_ide; ?>','.listaConsultas');
 							if(confirm('Registro agregado correctamente.\n¿Desea agregar otro registro?')==true) {
 								$(formulario).each(function(){ this.reset() })
 							} else {

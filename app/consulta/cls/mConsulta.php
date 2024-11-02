@@ -22,4 +22,13 @@
 		$datos = array($pac_ide);
 		return Enlace::sql($sql,$datos,3,'');
 	}
+
+	public function insert() {
+		$sql = "SELECT sf_consulta(?,?,?,?) AS res";
+		extract($_POST); 
+		//$datos = array(0,Funciones::may($des),1,$_SESSION['s_clien_ide']);
+				$datos = array(0,Funciones::may($des),1,$_SESSION['s_clien_ide']);
+
+		return Enlace::sql($sql,$datos,4,'res');
+	}
 } ?>
