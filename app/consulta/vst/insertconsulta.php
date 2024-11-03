@@ -84,8 +84,8 @@ $row=$mconsulta->porpac_ide($pac_ide);
 
 		<div class="form-group col-sm-2">
 			<label for="" class="label control-label col-sm-12 bolder">Resultado de la Consulta:</label>
-			<div class="col-sm-12" id="tp_mod">
-				<select class="form-control chosen" name="tp_mod" id="tp_mod">
+			<div class="col-sm-12" id="resul">
+				<select class="form-control chosen" name="resul" id="resul">
 					<option value="0" selected>Por Asignar</option>
 					<option value="1">Apto</option>
 					<option value="2">Apto con limitación</option>
@@ -127,28 +127,10 @@ $row=$mconsulta->porpac_ide($pac_ide);
 				fec: {
 					required: true,
 				},
-				fec_ini_cob: {
+				emp: {
 					required: true,
-				},		
-				mone: {
-					required: true,
-				},	
-				cuenta_ide: {
-					required: true,
-				},	
-				can: {
-					required: true,
-				},
-				mto: {
-					required: true,
-				},
-				cuo: {
-					required: true,
-				},	
-				cuenta_ide: {
-					required: true,					
-				},
-				fre: {
+				},				
+				mot: {
 					required: true,
 				}
 			},
@@ -157,28 +139,10 @@ $row=$mconsulta->porpac_ide($pac_ide);
 				fec: {
 					required: 'Obligatorio',
 					},
-				fec_ini_cob: {
-					required: 'Obligatorio',
-					},	
-				mone: {
-					required: 'Obligatorio',
-					},				
-				cuenta_ide: {
-					required: 'Obligatorio',
-					},											
-				can: {
+				emp: {
 					required: 'Obligatorio',
 					},
-				mto: {
-					required: 'Obligatorio',
-					},
-				cuo: {
-					required: 'Obligatorio',
-					},
-				cuenta_ide: {
-					required: 'Obligatorio',
-					},					
-				fre: {
+				mot: {
 					required: 'Obligatorio',
 				}
 			},
@@ -197,12 +161,7 @@ $row=$mconsulta->porpac_ide($pac_ide);
 			},
 
 			submitHandler: function (form) {
-				var vcuenta = $('select[name="cuenta_ide"]').val();
 
-				if (vcuenta=="") {
-					/*alerta('.msj','danger','Seleccione Cuenta');*/
-					alert('Seleccione Cuenta Bancaria');
-				} else {
 					$.post('prc-mconsulta-insert',$(formulario).serialize(),function(data){
 						if(!isNaN(data)) {
 							load('vst-consulta-listaConsultas','pac_ide=<?php echo $pac_ide; ?>','.listaConsultas');
@@ -215,7 +174,7 @@ $row=$mconsulta->porpac_ide($pac_ide);
 							alerta('.msj','danger',data)
 						}
 					})
-				}
+
 			},
 			
 			invalidHandler: function (form) {

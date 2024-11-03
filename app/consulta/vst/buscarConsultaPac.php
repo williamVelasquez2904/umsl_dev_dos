@@ -1,5 +1,7 @@
-<?php require '../../../cfg/base.php'; ?>
-<?php $row = $mpatient->lista(); ?>
+<?php
+require '../../../cfg/base.php';
+$row = $mpatient->lista();
+ ?>
 <form action="" class="op0">
 	<div class="form-group">
 		<label for="" class="label control-label col-sm-12 bolder">Buscar Paciente:</label>
@@ -74,8 +76,8 @@
 					if(data.trim()=='no') {
 						load('vst-consulta-insert','','.perfil');
 					} else {
-						load('vst-patient-datos.personales','pac_ide='+data.trim(),'.perfil');
-						load('vst-consulta-listaConsultas','pac_ide='+data.trim(),'.listaConsultas');
+						// load('vst-patient-datos.personales','pac_ide='+data.trim(),'.perfil');
+						// load('vst-consulta-listaConsultas','pac_ide='+data.trim(),'.listaConsultas');
 						load('vst-consulta-insertconsulta','pac_ide='+data.trim(),'.consulta');
 
 						
