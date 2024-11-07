@@ -12,21 +12,33 @@ $row = $mconsulta->listaporpaciente($pac_ide);
 			<thead>
 				<tr>
 					<th>Id</th>
-					<th>Banco</th>
+					<th>FECHA</th>
+					<th>NOMBRE</th>
+					<th>CEDULA</th>
+					<th>CONSULTA</th>
+					<th>RESULTADO</th>
 					<th>Opciones</th>
 				</tr>
 			</thead>
 			<tbody>
-				<?php foreach($row as $r): ?>
+				<?php foreach($row as $r): 
+					$texto_resultado="";
+					if ($r->cons_res_ide == 1)
+						$texto_resultado='Apto';
+					?>
 					<tr>
-						<td align="center"><?php echo $r->banco_ide ?></td>
-						<td><?php echo $r->banco_descrip ?></td>
+						<td align="center"><?php echo $r->cons_ide ?></td>
+						<td align="center"><?php echo $r->cons_fecha ?></td>
+						<td><?php echo $r->pac_nombre.', '.$r->pac_apellido  ?></td>
+						<td><?php echo $r->pac_numiden ?></td>
+						<td><?php echo $r->motivo_descrip ?></td>
+						<td><?php echo $texto_resultado ?></td>
 						<td>
 							<div class="btn-group">
-								<button class="btn btn-success btn-xs" title="Actualizar" onclick="modal('vst-banco-update','ide=<?php echo $r->banco_ide ?>')">
+								<button class="btn btn-success btn-xs" title="Actualizar" onclick="modal('vst-cons-update','ide=<?php echo $r->cons_ide ?>')">
 									<i class="fa fa-edit"></i>
 								</button>
-								<button class="btn btn-danger btn-xs" title="Borrar" onclick="modal('vst-banco-delete','ide=<?php echo $r->banco_ide ?>')">
+								<button class="btn btn-danger btn-xs" title="Borrar" onclick="modal('vst-cons-delete','ide=<?php echo $r->cons_ide ?>')">
 									<i class="fa fa-trash"></i>
 								</button>
 							</div>
