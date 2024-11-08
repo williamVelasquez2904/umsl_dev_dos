@@ -4,7 +4,7 @@
 	function __construct() {}
 
 	public function lista() {
-		$sql = "SELECT * FROM vw_enfermedad WHERE enf_borrado=0 ORDER BY enf_ide DESC";
+		$sql = "SELECT * FROM vw_enfermedad WHERE enf_borrado=0 ORDER BY enf_ide";
 		return Enlace::sql($sql,'',3,'');
 	}
 

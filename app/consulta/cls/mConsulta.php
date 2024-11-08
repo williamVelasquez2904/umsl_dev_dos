@@ -9,7 +9,7 @@
 	}
 
 	public function poride($ide) {
-		$sql = "SELECT * FROM vw_consulta WHERE cons_ide=? AND cons_borrado=0 ORDER BY cons_ide DESC";
+		$sql = "SELECT * FROM vw_consulta WHERE cons_ide=? AND cons_borrado=0 ORDER BY cons_ide";
 		$datos = array($ide);
 		return Enlace::sql($sql,$datos,3,'');
 	}
