@@ -41,6 +41,9 @@ $row = $mconsulta->listaporpaciente($pac_ide);
 								<button class="btn btn-danger btn-xs" title="Borrar" onclick="modal('vst-cons-delete','ide=<?php echo $r->cons_ide ?>')">
 									<i class="fa fa-trash"></i>
 								</button>
+								<button class="btn btn-success btn-xs" title="Ver detalles" onclick="modal('vst-consulta-verdetalles','ide=<?php echo $r->cons_ide ?>')">
+									<i class="fa fa-edit"></i>
+								</button>								
 							</div>
 						</td>
 					</tr>

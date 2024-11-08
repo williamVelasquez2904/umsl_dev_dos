@@ -8,6 +8,12 @@
 		return Enlace::sql($sql,'',3,'');
 	}
 
+	public function poride($ide) {
+		$sql = "SELECT * FROM vw_consulta WHERE cons_ide=? AND cons_borrado=0 ORDER BY cons_ide DESC";
+		$datos = array($ide);
+		return Enlace::sql($sql,$datos,3,'');
+	}
+
 	public function listaporpaciente($pac_ide) {
 		/*
 		$sql = "SELECT * FROM vw_contratoporcliente WHERE clien_ide =? and contrato_borrado = 0 ORDER BY contrato_ide DESC";*/
