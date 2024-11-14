@@ -1,0 +1,27 @@
+Pendiente
+
+1. Valoración consulta. botón adicional 
+
+2. Referencia a otros médicos, botón adicional 
+
+3. enfermedades, terminar
+
+4. Reposo, preguntar frecuencia y especificaciones. 
+
+5. Evaluar si chequeo y reposo pueden estar directamente asociado a cada consulta
+
+6. en la tabla consulta enfermedad relacionar referencia , crear tabla especialidad
+
+7. Crear tabla resultado 
+
+8. en tabla enfermedad agregar PATOLOGÍASSUSCEPTIBLESDENOTIFICACIÓNENINPSASEL y  PATOLOGÍASSUCEPTIBLESDECERTIFICACIÓNDELACONDICIÓNDELAPERSONACONDISCAPACIDAD
+
+PATOLOGIASAMERITANSEINVESTIGADASYNOTIFICADASALCONSEJONACIONALPARAPERSONASCONDISCAPACIDAD
+
+9.Se debe registrar  CArgo en tabla paciente?
+-------------------------------------------------------------------------
+
+1. Para emitir reporte preguntar el rango de fecha, o si es por mes. 
+
+2. en que momento se refiere, en registro de consulta o cuando se valora.
+
