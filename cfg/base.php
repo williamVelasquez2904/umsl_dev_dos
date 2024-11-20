@@ -20,6 +20,7 @@ $archivos = array(
 		'paciente'  =>array('mPaciente','cPaciente'),
 		'compania'  =>array('mCompania','cCompania'),		
 		'tienda'    =>array('mTienda','cTienda'),
+		'reportes'  =>array('mReportes','cReportes'),		
 		'auditoria' =>array('mAuditoria','cAuditoria')
 	);
 # Instanciacin de clases

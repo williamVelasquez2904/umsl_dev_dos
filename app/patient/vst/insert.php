@@ -1,19 +1,14 @@
 <?php require '../../../cfg/base.php'; ?>
 <div class="alert alert-info">
-	<i class="fa fa-exclamation-triangle fa-2x pull-left red"></i>[07-10-2024. insert] Por favor rellene el siguiente formulario para agregar un Paciente.
+	<i class="fa fa-exclamation-triangle fa-2x pull-left red"></i>[20-11-2024. insert] Por favor rellene el siguiente formulario para agregar un Paciente.
 </div>
 <form action="" class="op1-clien">
 	<div class="msj-clien" id="errores"></div>
 	<!-- Datos del cliente ############### -->
 	<fieldset><legend>Datos</legend>	
-		<div class="form-group col-sm-4">
-			<label for="" class="label control-label col-sm-12 bolder">Código:</label>
-			<div class="col-sm-12">
-				<input type="text" name="cod" class="form-control">
-			</div>
-		</div>
-		<div class="form-group col-sm-4">
-			<label for="" class="label control-label col-sm-12 bolder">Tipo:</label>
+
+		<div class="form-group col-sm-2">
+			<label for="" class="label control-label col-sm-12 bolder">Nacionalidad:</label>
 			<div class="col-sm-12" id="tipcli">
 				<select class="form-control chosen" name="tipcli" id="tipcli">
 					<option value=""></option>
@@ -23,35 +18,61 @@
 				</select>
 			</div>
 		</div>
-		<div class="form-group col-sm-4">
-			<label for="" class="label control-label col-sm-12 bolder">N° Identificación:</label>
+		<div class="form-group col-sm-2">
+			<label for="" class="label control-label col-sm-12 bolder">Cédula:</label>
 			<div class="col-sm-12">
 				<input type="text" name="ced" class="form-control">
 			</div>
 		</div>
 
-		<div class="clearfix"></div>
+		
 
-		<div class="form-group col-sm-4">
-			<label for="" class="label control-label col-sm-12 bolder">Nombre o Razón Social:</label>
+		<div class="form-group col-sm-2">
+			<label for="" class="label control-label col-sm-12 bolder">Nombre 1</label>
 			<div class="col-sm-12">
 				<input type="text" name="nom1" class="form-control">
 			</div>
 		</div>
-		<div class="form-group col-sm-4">
-			<label for="" class="label control-label col-sm-12 bolder">Alias:</label>
+		<div class="form-group col-sm-2">
+			<label for="" class="label control-label col-sm-12 bolder">Nombre 2</label>
 			<div class="col-sm-12">
 				<input type="text" name="nom2" class="form-control">
 			</div>
 		</div>
-		<div class="form-group col-sm-4">
+
+		<div class="form-group col-sm-2">
+			<label for="" class="label control-label col-sm-12 bolder">Apellido 1</label>
+			<div class="col-sm-12">
+				<input type="text" name="ape1" class="form-control">
+			</div>
+		</div>
+		<div class="form-group col-sm-2">
+			<label for="" class="label control-label col-sm-12 bolder">Apellido 2</label>
+			<div class="col-sm-12">
+				<input type="text" name="ape2" class="form-control">
+			</div>
+		</div>
+		<div class="clearfix"></div>
+
+		<div class="form-group col-sm-2">
 			<label for="" class="label control-label col-sm-12 bolder">Fecha Nacimiento:</label>
 			<div class="col-sm-12">
 				<input type="text" name="fnac" class="form-control fecha">
 			</div>
 		</div>
-		<div class="clearfix"></div>
-		<div class="form-group col-sm-12">
+		
+
+		<div class="form-group col-sm-2 col-xs-12">
+			<label for="" class="label control-label col-sm-12 bolder">Sexo</label>
+			<div class="col-sm-12 col-xs-12">
+				<select class="form-control chosen" name="sexo" id="sexo">
+					<option value=1>Masculino</option>
+					<option value=2>Femenino</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="form-group col-sm-8">
 			<label for="" class="label control-label col-sm-12 bolder">Dirección:</label>
 			<div class="col-sm-12">
 				<input type="text" name="dir" class="form-control">
@@ -71,44 +92,22 @@
 			</div>
 		</div>
 		<div class="form-group col-sm-4">
-			<label for="" class="label control-label col-sm-12 bolder">Contribuyente Especial:</label>
+			<label for="" class="label control-label col-sm-12 bolder">Grado de Instrucción></label>
 			<div class="col-sm-12">
-				<select class="form-control chosen" name="coes" id="coes">
-					<option value="0">No</option>
-					<option value="1">Si</option>
+				<select class="form-control chosen" name="grado_ide" id="grado_ide">
+					<option value="1">ANALFABETA</option>
+					<option value="2">PRIMARIA</option>
+					<option value="3">BACHILLER	</option>
+					<option value="4">T.S.U</option>
+					<option value="5">UNIVERSITARIO</option>
+					<option value="6">POST-GRADO</option>					
+					<option value="7">OTRO</option>	
 				</select>
 			</div>
 		</div>
+
 		<div class="clearfix"></div>
-		<div class="form-group col-sm-6">
-			<label for="" class="label control-label col-sm-12 bolder">Vendedor:</label>
-			<div class="col-sm-12" id="vende">
-				<select class="form-control chosen" name="vende" id="vende">
-					<option value=""></option>
-					<?php foreach($mvendedor->lista() as $v): ?>
-						<option value="<?php echo $v->vende_ide ?>"><?php echo $v->vende_razonsocial ?> (<?php echo $v->vende_alias ?>)</option>
-					<?php endforeach; ?>
-				</select>
-			</div>
-		</div>
-		<div class="form-group col-sm-6">
-			<label for="" class="label control-label col-sm-12 bolder">Zona:</label>
-			<div class="col-sm-12" id="zona">
-				<select class="form-control chosen" name="zona" id="zona">
-					<option value=""></option>
-					<?php foreach($mzona->lista() as $z): ?>
-						<option value="<?php echo $z->zona_ide ?>"><?php echo $z->zona_descrip ?></option>
-					<?php endforeach; ?>
-				</select>
-			</div>
-		</div>
-		<div class="clearfix"></div>
-		<div class="form-group col-sm-12">
-			<label for="" class="label control-label col-sm-12 bolder">Ubicación Mapa:</label>
-			<div class="col-sm-12">
-				<input type="text" name="ubimap" class="form-control">
-			</div>
-		</div>
+
 			
 <!-- Botón de acción ###########-->
 
@@ -183,16 +182,16 @@
 			},
 
 			submitHandler: function (form) {
-				$.post('prc-mcliente-insert',$(formulario).serialize(),function(data){
+				$.post('prc-mpatient-insert',$(formulario).serialize(),function(data){
 					if(!isNaN(data)) {
-						load('vst-cliente-datos.personales','clien_ide='+data.trim(),'.perfil');
+						load('vst-patient-datos.personales','pac_ide='+data.trim(),'.perfil');
 					} else {
 						var data1=data.split(' - ');
-						if (data1[0]=='Cliente se encuentra Inactivo') {
+						if (data1[0]==' se encuentra Inactivo') {
 							
 							
 
-							if(confirm('Cliente se encuentra Inactivo, ¿Desea Reactivarlo?')==true) {
+							if(confirm('Paciente se encuentra Inactivo, ¿Desea Reactivarlo?')==true) {
 								$.post('prc-mcliente-reactivarlo','ide='+data1[1],function(data2){
 									if(!isNaN(data2)) {
 										alert('El cliente fue Reactivado satisfactoriamente')

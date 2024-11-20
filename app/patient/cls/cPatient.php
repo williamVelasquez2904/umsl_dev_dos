@@ -1,4 +1,4 @@
-<?php class cPatient extends mPatient {
+<?php class cPatient extends mPatient { 
 	
 	public function buscar_dos() {
 		extract($_POST);

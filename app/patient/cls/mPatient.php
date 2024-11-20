@@ -23,22 +23,22 @@
 
 	public function insert() {
 		extract($_POST);
+
 		$sql = "SELECT sf_cliente(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) AS res";
 		$datos = array(
 			0, // Identificador
 			$tipcli,
 			$ced,
-			Funciones::may($cod),
 			Funciones::may($nom1),
 			Funciones::may($nom2),
-			Funciones::may($ubimap),
+			Funciones::may($ape1),
+			Funciones::may($ape2),
 			date('Y-m-d',strtotime($fnac)),
+			$sexo,
 			Funciones::may($dir),
 			$mov,
 			Funciones::may($corre),
-			$coes,
-			$zona,
-			$vende,
+			$grado_ide,
 			1, //  operación
 			$_SESSION['s_usua_ide'] #Usuario que realiza operación
 		);
