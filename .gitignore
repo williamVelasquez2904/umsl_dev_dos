@@ -3,6 +3,7 @@
 /js
 /lib
 /planificadores
+/sql
 .htaccess
 error_log
 *revisar.php
