@@ -22,23 +22,23 @@
 	}
 
 	public function insert() {
-		extract($_POST);
+		extract($_POST);var_dump($tipcli);
 
-		$sql = "SELECT sf_cliente(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) AS res";
+
+		/*$sql = "SELECT sf_cliente(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) AS res";*/
+		$sql = "SELECT sf_patient(?,?,?,?,?,?,?,?,?,?,?,?,?) AS res";
 		$datos = array(
 			0, // Identificador
 			$tipcli,
 			$ced,
-			Funciones::may($nom1),
-			Funciones::may($nom2),
-			Funciones::may($ape1),
-			Funciones::may($ape2),
-			date('Y-m-d',strtotime($fnac)),
+			Funciones::may($nom),
+			Funciones::may($ape),
 			$sexo,
+			date('Y-m-d',strtotime($fnac)),
 			Funciones::may($dir),
+			$grado_ide,
 			$mov,
 			Funciones::may($corre),
-			$grado_ide,
 			1, //  operación
 			$_SESSION['s_usua_ide'] #Usuario que realiza operación
 		);

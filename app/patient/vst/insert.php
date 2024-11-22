@@ -1,6 +1,6 @@
 <?php require '../../../cfg/base.php'; ?>
 <div class="alert alert-info">
-	<i class="fa fa-exclamation-triangle fa-2x pull-left red"></i>[20-11-2024. insert] Por favor rellene el siguiente formulario para agregar un Paciente.
+	<i class="fa fa-exclamation-triangle fa-2x pull-left red"></i>[21-11-2024. insert] Por favor rellene el siguiente formulario para agregar un Paciente.
 </div>
 <form action="" class="op1-clien">
 	<div class="msj-clien" id="errores"></div>
@@ -27,31 +27,30 @@
 
 		
 
-		<div class="form-group col-sm-2">
-			<label for="" class="label control-label col-sm-12 bolder">Nombre 1</label>
+		<div class="form-group col-sm-3">
+			<label for="" class="label control-label col-sm-12 bolder">Nombre </label>
 			<div class="col-sm-12">
-				<input type="text" name="nom1" class="form-control">
-			</div>
-		</div>
-		<div class="form-group col-sm-2">
-			<label for="" class="label control-label col-sm-12 bolder">Nombre 2</label>
-			<div class="col-sm-12">
-				<input type="text" name="nom2" class="form-control">
+				<input type="text" name="nom" class="form-control">
 			</div>
 		</div>
 
-		<div class="form-group col-sm-2">
-			<label for="" class="label control-label col-sm-12 bolder">Apellido 1</label>
+		<div class="form-group col-sm-3">
+			<label for="" class="label control-label col-sm-12 bolder">Apellido </label>
 			<div class="col-sm-12">
-				<input type="text" name="ape1" class="form-control">
+				<input type="text" name="ape" class="form-control">
 			</div>
 		</div>
-		<div class="form-group col-sm-2">
-			<label for="" class="label control-label col-sm-12 bolder">Apellido 2</label>
-			<div class="col-sm-12">
-				<input type="text" name="ape2" class="form-control">
+		<div class="form-group col-sm-2 col-xs-12">
+			<label for="" class="label control-label col-sm-12 bolder">Sexo</label>
+			<div class="col-sm-12 col-xs-12">
+				<select class="form-control chosen" name="sexo" id="sexo">
+					<option value=""></option>
+					<option value=1>Masculino</option>
+					<option value=2>Femenino</option>
+				</select>
 			</div>
-		</div>
+		</div>		
+
 		<div class="clearfix"></div>
 
 		<div class="form-group col-sm-2">
@@ -60,38 +59,14 @@
 				<input type="text" name="fnac" class="form-control fecha">
 			</div>
 		</div>
-		
 
-		<div class="form-group col-sm-2 col-xs-12">
-			<label for="" class="label control-label col-sm-12 bolder">Sexo</label>
-			<div class="col-sm-12 col-xs-12">
-				<select class="form-control chosen" name="sexo" id="sexo">
-					<option value=1>Masculino</option>
-					<option value=2>Femenino</option>
-				</select>
-			</div>
-		</div>
-
-		<div class="form-group col-sm-8">
+		<div class="form-group col-sm-7">
 			<label for="" class="label control-label col-sm-12 bolder">Dirección:</label>
 			<div class="col-sm-12">
 				<input type="text" name="dir" class="form-control">
 			</div>
 		</div>
-		<div class="clearfix"></div>
-		<div class="form-group col-sm-4">
-			<label for="" class="label control-label col-sm-12 bolder">Teléfono Móvil:</label>
-			<div class="col-sm-12">
-				<input type="text" name="mov" class="form-control">
-			</div>
-		</div>
-		<div class="form-group col-sm-4">
-			<label for="" class="label control-label col-sm-12 bolder">Correo Electrónico:</label>
-			<div class="col-sm-12">
-				<input type="email" name="corre" class="form-control">
-			</div>
-		</div>
-		<div class="form-group col-sm-4">
+		<div class="form-group col-sm-3">
 			<label for="" class="label control-label col-sm-12 bolder">Grado de Instrucción></label>
 			<div class="col-sm-12">
 				<select class="form-control chosen" name="grado_ide" id="grado_ide">
@@ -105,6 +80,20 @@
 				</select>
 			</div>
 		</div>
+		<div class="clearfix"></div>
+		<div class="form-group col-sm-3">
+			<label for="" class="label control-label col-sm-12 bolder">Teléfono Móvil:</label>
+			<div class="col-sm-12">
+				<input type="text" name="mov" class="form-control">
+			</div>
+		</div>
+		<div class="form-group col-sm-4">
+			<label for="" class="label control-label col-sm-12 bolder">Correo Electrónico:</label>
+			<div class="col-sm-12">
+				<input type="email" name="corre" class="form-control">
+			</div>
+		</div>
+
 
 		<div class="clearfix"></div>
 
@@ -145,7 +134,7 @@
 				ced: {
 					required: true,
 				},
-				nom1: {
+				nom: {
 					required: true,
 				},
 				dir: {
@@ -160,7 +149,7 @@
 				ced: {
 					required: 'Obligatorio',
 				},
-				nom1: {
+				nom: {
 					required: 'Obligatorio',
 				},
 				dir: {
