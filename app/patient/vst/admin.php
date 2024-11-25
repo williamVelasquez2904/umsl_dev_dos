@@ -1,7 +1,7 @@
-<?php $row = $mpatient->lista(); ?>
+<?php $row = $mpatient->lista(); ?> 
 <form action="" class="op0">
 	<div class="form-group">
-		<label for="" class="label control-label col-sm-12 bolder">[07-10-2024. Patient] - Buscar Paciente:</label>
+		<label for="" class="label control-label col-sm-12 bolder">[23-11-2024. Patient] - Buscar Paciente:</label>
 		<div class="col-sm-9">
 			<input type="text" class="form-control" id="buscarpaciente" name="pac_ide">
 		</div>

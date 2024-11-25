@@ -1,5 +1,8 @@
 <?php require '../../../cfg/base.php';  
-var_dump($pac_ide);
+		var_dump("<PRE>");
+		var_dump("En datos personales pac ide = ".$pac_ide);
+		var_dump("</pre>");
+//var_dump($pac_ide);
 $row = $mpatient->poride($pac_ide);
 $row_fich = $mpermfich->poride(1);
 ?>
@@ -23,6 +26,12 @@ $row_fich = $mpermfich->poride(1);
 					<div class="table-responsive">
 						<table class="table table-bordered">
 							<tr>
+								<th class="active text-right">Nacionalidad:</th>
+								<td>
+									<?php echo $row[0]->pac_tipo; ?>
+								</td>
+							</tr>
+							<tr>
 								<th class="active text-right">Número de Identificación:</th>
 								<td><?php echo $row[0]->pac_numiden ?></td>	
 								<th class="active text-right">Razón Social o Nombre:</th>
@@ -30,15 +39,21 @@ $row_fich = $mpermfich->poride(1);
 							</tr>
 							<tr>
 								<th class="active text-right">Fecha de Nacimiento:</th>
-								<td><?php echo date('d-m-Y',strtotime($row[0]->pac_fecnac)); ?></td>
+								<td><?php echo date('d-m-Y',strtotime($row[0]->pac_fecnaci)); ?></td>
 								<th class="active text-right">Sexo:</th>
-								<td><?php echo funciones::getGenero($row[0]->pac_sexo); ?></td>
+								<td><?php echo funciones::getGenero($row[0]->pac_genero); ?></td>
 								
 							</tr>
 							<tr>
 								<th class="active text-right">Profesión:</th>
 								<td>
 									<?php echo $row[0]->profesion; ?>
+								</td>
+							</tr>
+							<tr>
+								<th class="active text-right">Dirección:</th>
+								<td>
+									<?php echo $row[0]->pac_direcci; ?>
 								</td>
 							</tr>
 

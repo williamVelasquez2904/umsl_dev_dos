@@ -4,7 +4,17 @@
 	<form action="" class="op2-pac well">
 		<div class="msj-pac"></div>
 		<fieldset><legend>Datos del Paciente</legend>	
-
+			<div class="form-group col-sm-2">
+				<label for="" class="label control-label col-sm-12 bolder">Nacionalidad </label>
+				<div class="col-sm-10" id="tipcli">
+					<select class="form-control chosen" title="Agregar" name="tipcli" id="tipcli" onchange="load('vst-tipclien-select','tipcli_ide='+this.value,'#tipcli');">
+						<option value=""></option>
+						<?php foreach($mtipclien->lista() as $p): ?>
+							<option value="<?php echo $p->tipcli_ide ?>" <?php echo $fn->select($p->tipcli_ide,$r->clien_tipcli) ?>><?php echo $p->tipcli_descrip ?></option>
+						<?php endforeach; ?>
+					</select>
+				</div>
+			</div>
 
 			<div class="form-group col-sm-2
 			">
@@ -27,32 +37,34 @@
 					<input type="text" name="ape" class="form-control" value="<?php echo $r->pac_apellido ?>">
 				</div>
 			</div>
-
+			<div class="form-group col-sm-2 col-xs-12">
+				<label for="" class="label control-label col-sm-12 bolder">Sexo</label>
+				<div class="col-sm-12 col-xs-12">
+					<select class="form-control chosen" name="sexo" id="sexo">
+						<option value=""></option>
+						<option value=1>Masculino</option>
+						<option value=2>Femenino</option>
+					</select>
+				</div>
+		    </div>	
+		    <div class="clearfix"></div>
 			<div class="form-group col-sm-2">
 				<label for="" class="label control-label col-sm-12 bolder">Fecha de Nacimiento:</label>
 				<div class="col-sm-12">
-					<input type="text" name="fnac" class="form-control fecha" value="<?php echo date('d-m-Y',strtotime($r->pac_fecnac)); ?>">
+					<input type="text" name="fnac" class="form-control fecha" value="<?php echo date('d-m-Y',strtotime($r->pac_fecnaci)); ?>">
 				</div>
 			</div>
-			
-						<div class="clearfix"></div>
-
-			<div class="form-group col-sm-2">
-				<label for="" class="label control-label col-sm-12 bolder">Sexo:</label>
-				<div class="col-sm-12">
-						<select class="form-control chosen" name="sexo" id="sexo">
-							<option value=1>Masculino</option>
-							<option value=2>Femenino</option>
-						</select>
-				</div>
+		<div class="form-group col-sm-7">
+			<label for="" class="label control-label col-sm-12 bolder">Dirección:</label>
+			<div class="col-sm-12">
+				<input type="text" name="dir" class="form-control" value="<?php echo $r->pac_direcci ?>">
 			</div>
-
-
-
+		</div>
+						
 		<div class="form-group col-sm-2">
 			<label for="" class="label control-label col-sm-12 bolder">Grado de Instruccion:</label>
 			<div class="col-sm-12" id="grado">
-				<select class="form-control chosen" title="Tienda" name="grado" id="grado">
+				<select class="form-control chosen" title="Tienda" name="grado_ide" id="grado_ide">
 					<option value=""></option>
 					<?php foreach($mprofesion->lista() as $p): ?>
 						<option value="<?php echo $p->profesion_ide; ?>"
@@ -65,10 +77,20 @@
 				</select>
 			</div>
 		</div>
-
-								
-			<div class="clearfix"></div>
-
+		<div class="clearfix"></div>
+		<div class="form-group col-sm-3">
+			<label for="" class="label control-label col-sm-12 bolder">Teléfono Móvil:</label>
+			<div class="col-sm-12">
+				<input type="text" name="mov" class="form-control">
+			</div>
+		</div>
+		<div class="form-group col-sm-4">
+			<label for="" class="label control-label col-sm-12 bolder">Correo Electrónico:</label>
+			<div class="col-sm-12">
+				<input type="email" name="corre" class="form-control">
+			</div>
+		</div>
+		<div class="clearfix"></div>
 
 			<div class="form-actions">
 				<div class="btn-group pull-right">

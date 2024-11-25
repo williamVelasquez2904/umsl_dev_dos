@@ -1,4 +1,4 @@
-<?php class mPatient {
+<?php class mPatient { 
 
 	function __clone() {}
 	function __construct() {}
@@ -22,7 +22,7 @@
 	}
 
 	public function insert() {
-		extract($_POST);var_dump($tipcli);
+		extract($_POST);//var_dump($tipcli);
 
 
 		/*$sql = "SELECT sf_cliente(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) AS res";*/
@@ -42,6 +42,8 @@
 			1, //  operación
 			$_SESSION['s_usua_ide'] #Usuario que realiza operación
 		);
+/*		var_dump($datos);
+*/
 		return Enlace::sql($sql,$datos,4,'res');
 	}
 
@@ -79,8 +81,25 @@
 
 	public function update() {
 		extract($_POST);
-		$sql = "SELECT sf_patient(?,?,?,?,?,?,?,?,?) AS res";
-		$datos = array($pac_ide,
+/*		$sql = "SELECT sf_patient(?,?,?,?,?,?,?,?,?) AS res";
+*/		$sql = "SELECT sf_patient(?,?,?,?,?,?,?,?,?,?,?,?,?) AS res";
+		$datos = array(
+			$pac_ide, // Identificador
+			$tipcli,
+			$ced,
+			Funciones::may($nom),
+			Funciones::may($ape),
+			$sexo,
+			date('Y-m-d',strtotime($fnac)),
+			Funciones::may($dir),
+			$grado_ide,
+			$mov,
+			Funciones::may($corre),
+			2, //  operación
+			$_SESSION['s_usua_ide'] #Usuario que realiza operación
+		);
+/*		$datos = array(
+			$pac_ide,
 			$ced, 
 			Funciones::may($nom),
 			Funciones::may($ape),
@@ -89,7 +108,7 @@
 			$grado,
 			2,
 			$_SESSION['s_usua_ide']
-		);
+		);*/
 		return Enlace::sql($sql,$datos,4,'res');
 	}
 
