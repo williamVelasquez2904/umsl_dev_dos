@@ -1,7 +1,7 @@
 <?php $row = $mpatient->lista(); ?> 
 <form action="" class="op0">
 	<div class="form-group">
-		<label for="" class="label control-label col-sm-12 bolder">[23-11-2024. Patient] - Buscar Paciente:</label>
+		<label for="" class="label control-label col-sm-12 bolder">[25-11-2024. Patient] - Buscar Paciente:</label>
 		<div class="col-sm-9">
 			<input type="text" class="form-control" id="buscarpaciente" name="pac_ide">
 		</div>
@@ -14,6 +14,8 @@
 <div class="clearfix"></div>
 <div class="space-10"></div>
 <div class="perfil"></div>
+<div class="clearfix"></div>
+<div class="companias"></div>
 <script>
 	$(function(){
 		var tag_input = $('#buscarpaciente');
@@ -68,6 +70,7 @@
 						load('vst-patient-insert','','.perfil');
 					} else {
 						load('vst-patient-datos.personales','pac_ide='+data.trim(),'.perfil');
+						load('vst-paccompania-lista','pac_ide='+data.trim(),'.companias');
 					}
 				})
 			},
