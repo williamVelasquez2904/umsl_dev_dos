@@ -1,4 +1,4 @@
-<?php
+<?php 
 require '../../../cfg/base.php';
 $row = $mpatient->lista();
  ?>
