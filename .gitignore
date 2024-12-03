@@ -7,3 +7,4 @@
 .htaccess
 error_log
 *revisar.php
+*.sql

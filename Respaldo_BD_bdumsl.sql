@@ -54,7 +54,7 @@ CREATE TABLE `tbl_auditori` (
   `audi_tabla` varchar(255) DEFAULT NULL COMMENT 'Nombre de la tabla afectada, se omite el tbl_',
   `audi_registr` int(11) DEFAULT NULL COMMENT 'Registro afecto',
   PRIMARY KEY (`audi_ide`)
-) ENGINE=InnoDB AUTO_INCREMENT=90 DEFAULT CHARSET=utf8 COMMENT='Registra todos los movimientos realizados en el sistema';
+) ENGINE=InnoDB AUTO_INCREMENT=92 DEFAULT CHARSET=utf8 COMMENT='Registra todos los movimientos realizados en el sistema';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -63,7 +63,7 @@ CREATE TABLE `tbl_auditori` (
 
 LOCK TABLES `tbl_auditori` WRITE;
 /*!40000 ALTER TABLE `tbl_auditori` DISABLE KEYS */;
-INSERT INTO `tbl_auditori` VALUES (1,1,1,'2024-10-13 13:25:47','permisos',12),(2,1,1,'2024-10-13 13:26:02','permisos',13),(3,NULL,1,'2024-10-13 16:32:39','profesion',1),(4,1,1,'2024-10-13 16:37:19','profesion',2),(5,1,1,'2024-10-13 16:37:29','profesion',3),(6,1,1,'2024-10-13 16:37:39','profesion',4),(7,1,1,'2024-10-13 16:37:50','profesion',5),(8,1,1,'2024-10-13 16:38:00','profesion',6),(9,1,1,'2024-10-13 16:38:10','profesion',7),(10,1,1,'2024-10-14 20:53:21','enfermedad',1),(11,1,1,'2024-10-14 20:58:14','enfermedad',2),(12,1,1,'2024-10-14 21:03:18','enfermedad',1),(13,1,1,'2024-10-14 21:03:24','enfermedad',2),(14,1,1,'2024-10-14 21:03:31','enfermedad',3),(15,1,1,'2024-10-14 21:13:59','permisos',14),(16,1,1,'2024-10-14 21:18:21','permisos',15),(17,1,2,'2024-10-14 22:55:18','paciente',2),(18,1,2,'2024-10-14 22:55:31','paciente',2),(19,1,2,'2024-10-14 22:55:44','paciente',2),(20,1,2,'2024-10-14 22:55:53','paciente',2),(21,1,2,'2024-10-14 22:56:17','paciente',1),(22,1,2,'2024-10-14 22:56:28','paciente',1),(23,1,2,'2024-10-14 22:56:38','paciente',1),(24,1,2,'2024-10-14 23:02:23','paciente',2),(25,2,2,'2024-10-16 22:46:04','paciente',2),(26,2,2,'2024-10-17 21:00:41','paciente',1),(27,2,2,'2024-10-17 21:01:12','paciente',1),(28,2,2,'2024-10-17 21:01:23','paciente',1),(29,2,2,'2024-10-17 22:00:23','paciente',1),(30,2,2,'2024-10-17 22:06:25','paciente',1),(31,2,2,'2024-10-17 22:06:31','paciente',1),(32,2,2,'2024-10-17 22:32:49','paciente',1),(33,2,2,'2024-10-17 22:38:32','paciente',2),(34,2,2,'2024-10-17 22:59:04','paciente',1),(35,2,2,'2024-10-17 22:59:09','paciente',1),(36,2,2,'2024-10-17 22:59:33','paciente',1),(37,2,2,'2024-10-17 22:59:51','paciente',1),(38,2,2,'2024-10-17 23:00:08','paciente',2),(39,2,2,'2024-10-17 23:00:23','paciente',2),(40,1,1,'2024-10-23 22:41:08','permisos',16),(41,1,1,'2024-10-23 22:41:26','permisos',17),(42,1,1,'2024-10-24 13:08:09','permisos',18),(43,1,1,'2024-10-24 13:08:24','permisos',19),(44,1,1,'2024-10-24 13:08:27','permisos',20),(45,1,1,'2024-10-24 13:09:06','permisos',21),(46,1,1,'2024-10-29 22:04:54','permisos',22),(47,1,1,'2024-10-29 22:05:08','permisos',23),(48,1,1,'2024-10-29 22:05:19','permisos',24),(49,NULL,1,'2024-11-02 21:50:51','consulta',1),(50,NULL,1,'2024-11-02 21:57:54','consulta',2),(51,NULL,1,'2024-11-02 21:58:18','consulta',3),(52,NULL,1,'2024-11-02 21:58:30','consulta',4),(53,1,1,'2024-11-02 22:00:54','consulta',5),(54,1,1,'2024-11-02 22:03:20','consulta',1),(55,1,1,'2024-11-03 09:25:45','consulta',2),(56,1,1,'2024-11-21 22:18:56','paciente',1),(57,1,1,'2024-11-21 22:20:46','paciente',2),(58,1,1,'2024-11-21 22:24:39','paciente',3),(59,1,1,'2024-11-21 22:30:55','paciente',4),(60,1,1,'2024-11-21 22:32:46','paciente',5),(61,1,1,'2024-11-21 22:43:06','paciente',6),(62,1,1,'2024-11-21 22:43:27','paciente',7),(63,1,1,'2024-11-21 22:54:27','paciente',8),(64,1,1,'2024-11-21 22:55:07','paciente',9),(65,1,1,'2024-11-21 23:00:46','paciente',10),(66,1,1,'2024-11-21 23:03:37','paciente',11),(67,1,1,'2024-11-21 23:09:29','paciente',12),(68,1,1,'2024-11-23 21:36:43','paciente',1),(69,1,1,'2024-11-24 09:14:36','paciente',2),(70,1,1,'2024-11-24 09:47:00','paciente',3),(71,NULL,2,'2024-11-24 10:23:43','fichas',10),(72,1,1,'2024-11-24 11:09:50','paciente',4),(73,1,1,'2024-11-24 11:14:08','paciente',5),(74,1,2,'2024-11-24 18:53:26','paciente',4),(75,1,2,'2024-11-24 18:53:42','paciente',4),(76,1,2,'2024-11-24 18:54:23','paciente',4),(77,1,2,'2024-11-24 19:44:02','paciente',4),(78,1,2,'2024-11-24 19:44:12','paciente',4),(79,1,2,'2024-11-24 19:55:57','paciente',3),(80,1,2,'2024-11-24 19:56:19','paciente',3),(81,1,2,'2024-11-24 19:56:29','paciente',3),(82,1,2,'2024-11-24 19:56:37','paciente',3),(83,1,2,'2024-11-24 19:56:45','paciente',3),(84,1,2,'2024-11-24 20:02:12','paciente',4),(85,1,2,'2024-11-24 20:04:54','paciente',4),(86,1,2,'2024-11-24 20:05:04','paciente',4),(87,1,2,'2024-11-24 20:05:14','paciente',4),(88,1,2,'2024-11-24 20:05:25','paciente',4),(89,1,2,'2024-11-24 20:05:34','paciente',4);
+INSERT INTO `tbl_auditori` VALUES (1,1,1,'2024-10-13 13:25:47','permisos',12),(2,1,1,'2024-10-13 13:26:02','permisos',13),(3,NULL,1,'2024-10-13 16:32:39','profesion',1),(4,1,1,'2024-10-13 16:37:19','profesion',2),(5,1,1,'2024-10-13 16:37:29','profesion',3),(6,1,1,'2024-10-13 16:37:39','profesion',4),(7,1,1,'2024-10-13 16:37:50','profesion',5),(8,1,1,'2024-10-13 16:38:00','profesion',6),(9,1,1,'2024-10-13 16:38:10','profesion',7),(10,1,1,'2024-10-14 20:53:21','enfermedad',1),(11,1,1,'2024-10-14 20:58:14','enfermedad',2),(12,1,1,'2024-10-14 21:03:18','enfermedad',1),(13,1,1,'2024-10-14 21:03:24','enfermedad',2),(14,1,1,'2024-10-14 21:03:31','enfermedad',3),(15,1,1,'2024-10-14 21:13:59','permisos',14),(16,1,1,'2024-10-14 21:18:21','permisos',15),(17,1,2,'2024-10-14 22:55:18','paciente',2),(18,1,2,'2024-10-14 22:55:31','paciente',2),(19,1,2,'2024-10-14 22:55:44','paciente',2),(20,1,2,'2024-10-14 22:55:53','paciente',2),(21,1,2,'2024-10-14 22:56:17','paciente',1),(22,1,2,'2024-10-14 22:56:28','paciente',1),(23,1,2,'2024-10-14 22:56:38','paciente',1),(24,1,2,'2024-10-14 23:02:23','paciente',2),(25,2,2,'2024-10-16 22:46:04','paciente',2),(26,2,2,'2024-10-17 21:00:41','paciente',1),(27,2,2,'2024-10-17 21:01:12','paciente',1),(28,2,2,'2024-10-17 21:01:23','paciente',1),(29,2,2,'2024-10-17 22:00:23','paciente',1),(30,2,2,'2024-10-17 22:06:25','paciente',1),(31,2,2,'2024-10-17 22:06:31','paciente',1),(32,2,2,'2024-10-17 22:32:49','paciente',1),(33,2,2,'2024-10-17 22:38:32','paciente',2),(34,2,2,'2024-10-17 22:59:04','paciente',1),(35,2,2,'2024-10-17 22:59:09','paciente',1),(36,2,2,'2024-10-17 22:59:33','paciente',1),(37,2,2,'2024-10-17 22:59:51','paciente',1),(38,2,2,'2024-10-17 23:00:08','paciente',2),(39,2,2,'2024-10-17 23:00:23','paciente',2),(40,1,1,'2024-10-23 22:41:08','permisos',16),(41,1,1,'2024-10-23 22:41:26','permisos',17),(42,1,1,'2024-10-24 13:08:09','permisos',18),(43,1,1,'2024-10-24 13:08:24','permisos',19),(44,1,1,'2024-10-24 13:08:27','permisos',20),(45,1,1,'2024-10-24 13:09:06','permisos',21),(46,1,1,'2024-10-29 22:04:54','permisos',22),(47,1,1,'2024-10-29 22:05:08','permisos',23),(48,1,1,'2024-10-29 22:05:19','permisos',24),(49,NULL,1,'2024-11-02 21:50:51','consulta',1),(50,NULL,1,'2024-11-02 21:57:54','consulta',2),(51,NULL,1,'2024-11-02 21:58:18','consulta',3),(52,NULL,1,'2024-11-02 21:58:30','consulta',4),(53,1,1,'2024-11-02 22:00:54','consulta',5),(54,1,1,'2024-11-02 22:03:20','consulta',1),(55,1,1,'2024-11-03 09:25:45','consulta',2),(56,1,1,'2024-11-21 22:18:56','paciente',1),(57,1,1,'2024-11-21 22:20:46','paciente',2),(58,1,1,'2024-11-21 22:24:39','paciente',3),(59,1,1,'2024-11-21 22:30:55','paciente',4),(60,1,1,'2024-11-21 22:32:46','paciente',5),(61,1,1,'2024-11-21 22:43:06','paciente',6),(62,1,1,'2024-11-21 22:43:27','paciente',7),(63,1,1,'2024-11-21 22:54:27','paciente',8),(64,1,1,'2024-11-21 22:55:07','paciente',9),(65,1,1,'2024-11-21 23:00:46','paciente',10),(66,1,1,'2024-11-21 23:03:37','paciente',11),(67,1,1,'2024-11-21 23:09:29','paciente',12),(68,1,1,'2024-11-23 21:36:43','paciente',1),(69,1,1,'2024-11-24 09:14:36','paciente',2),(70,1,1,'2024-11-24 09:47:00','paciente',3),(71,NULL,2,'2024-11-24 10:23:43','fichas',10),(72,1,1,'2024-11-24 11:09:50','paciente',4),(73,1,1,'2024-11-24 11:14:08','paciente',5),(74,1,2,'2024-11-24 18:53:26','paciente',4),(75,1,2,'2024-11-24 18:53:42','paciente',4),(76,1,2,'2024-11-24 18:54:23','paciente',4),(77,1,2,'2024-11-24 19:44:02','paciente',4),(78,1,2,'2024-11-24 19:44:12','paciente',4),(79,1,2,'2024-11-24 19:55:57','paciente',3),(80,1,2,'2024-11-24 19:56:19','paciente',3),(81,1,2,'2024-11-24 19:56:29','paciente',3),(82,1,2,'2024-11-24 19:56:37','paciente',3),(83,1,2,'2024-11-24 19:56:45','paciente',3),(84,1,2,'2024-11-24 20:02:12','paciente',4),(85,1,2,'2024-11-24 20:04:54','paciente',4),(86,1,2,'2024-11-24 20:05:04','paciente',4),(87,1,2,'2024-11-24 20:05:14','paciente',4),(88,1,2,'2024-11-24 20:05:25','paciente',4),(89,1,2,'2024-11-24 20:05:34','paciente',4),(90,1,2,'2024-11-25 23:08:38','paciente',3),(91,3,2,'2024-11-26 22:38:34','paciente',3);
 /*!40000 ALTER TABLE `tbl_auditori` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -345,6 +345,31 @@ INSERT INTO `tbl_motivo` VALUES (1,'Egreso',0),(2,'Periodico',0),(3,'Ingreso',0)
 UNLOCK TABLES;
 
 --
+-- Table structure for table `tbl_paccompania`
+--
+
+DROP TABLE IF EXISTS `tbl_paccompania`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_paccompania` (
+  `paccia_ide` int(11) NOT NULL AUTO_INCREMENT,
+  `paccia_pac_ide` int(11) DEFAULT NULL COMMENT 'id pac',
+  `paccia_cia_ide` int(11) DEFAULT NULL COMMENT 'id compania',
+  `paccia_borrado` int(11) DEFAULT '0',
+  PRIMARY KEY (`paccia_ide`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_paccompania`
+--
+
+LOCK TABLES `tbl_paccompania` WRITE;
+/*!40000 ALTER TABLE `tbl_paccompania` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_paccompania` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `tbl_paciente`
 --
 
@@ -469,7 +494,7 @@ CREATE TABLE `tbl_paciente_uno` (
 
 LOCK TABLES `tbl_paciente_uno` WRITE;
 /*!40000 ALTER TABLE `tbl_paciente_uno` DISABLE KEYS */;
-INSERT INTO `tbl_paciente_uno` VALUES (2,'',11491975,'WI','VE','1','1977-12-18','P2',2,'04147235521','WAVM@HOYMAIL.COM','2024-11-24 09:14:36',0),(3,'J',13146530,'MARLENY','HERNANDEZ','2','1977-12-18','PREGO',1,'04147105000','MAR@GMAIL.COM','2024-11-24 09:47:00',0),(4,'V',2892998,'GLADYS','MANRIQUE','0','1941-11-28','PREGO',4,'0424','GLADYS@GMAIL.COM','2024-11-24 11:09:50',0),(5,'V',1558878,'R','V','2','1941-07-01','KJHKJHJKHKJ',1,'0414','RRR@GMAIL.COM','2024-11-24 11:14:08',0);
+INSERT INTO `tbl_paciente_uno` VALUES (2,'',11491975,'WI','VE','1','1977-12-18','P2',2,'04147235521','WAVM@HOYMAIL.COM','2024-11-24 09:14:36',0),(3,'J',13146530,'MARLENY','HERNANDEZ','2','1977-12-18','PREGO',5,'04147105000','MAR@GMAIL.COM','2024-11-24 09:47:00',0),(4,'V',2892998,'GLADYS','MANRIQUE','0','1941-11-28','PREGO',4,'0424','GLADYS@GMAIL.COM','2024-11-24 11:09:50',0),(5,'V',1558878,'R','V','2','1941-07-01','KJHKJHJKHKJ',1,'0414','RRR@GMAIL.COM','2024-11-24 11:14:08',0);
 /*!40000 ALTER TABLE `tbl_paciente_uno` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -814,6 +839,23 @@ SET character_set_client = utf8;
  1 AS `motivo_ide`,
  1 AS `motivo_descrip`,
  1 AS `motivo_borrado`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_paccompania`
+--
+
+DROP TABLE IF EXISTS `vw_paccompania`;
+/*!50001 DROP VIEW IF EXISTS `vw_paccompania`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `vw_paccompania` AS SELECT 
+ 1 AS `paccia_ide`,
+ 1 AS `paccia_pac_ide`,
+ 1 AS `paccia_cia_ide`,
+ 1 AS `paccia_borrado`,
+ 1 AS `compania_rif`,
+ 1 AS `compania_nombre`*/;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -1505,6 +1547,24 @@ DELIMITER ;
 /*!50001 SET collation_connection      = @saved_col_connection */;
 
 --
+-- Final view structure for view `vw_paccompania`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_paccompania`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_paccompania` AS select `tbl_paccompania`.`paccia_ide` AS `paccia_ide`,`tbl_paccompania`.`paccia_pac_ide` AS `paccia_pac_ide`,`tbl_paccompania`.`paccia_cia_ide` AS `paccia_cia_ide`,`tbl_paccompania`.`paccia_borrado` AS `paccia_borrado`,`tbl_compania`.`compania_rif` AS `compania_rif`,`tbl_compania`.`compania_nombre` AS `compania_nombre` from (`tbl_paccompania` join `tbl_compania`) where (`tbl_paccompania`.`paccia_cia_ide` = `tbl_compania`.`compania_ide`) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
 -- Final view structure for view `vw_paciente`
 --
 
@@ -1621,4 +1681,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-25  8:16:49
+-- Dump completed on 2024-11-29  7:56:55

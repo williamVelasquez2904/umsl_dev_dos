@@ -1,6 +1,5 @@
 <?php require '../../../cfg/base.php'; 
 extract($_POST);
-
 ?>
 <form action="" class="opEmpresaPaciente form-horizontal">
 	<?php echo $fn->modalHeader('Agregar Empresa Vinculada a Empleado') ?>
@@ -19,6 +18,8 @@ extract($_POST);
 				</select>
 			</div>
 		</div>
+		<input type="text" class="form-control" name="pac_ide" value="<?php echo $pac_ide ?>">			
+
 	</div>
 	<?php echo $fn->modalFooter(1) ?>
 </form>
