@@ -9,7 +9,7 @@ $row=$mpaccompania->companias_por_pac_ide($pac_ide);?>
 <div class="btn-group pull-right">
 		<button class="btn btn-inverse" onclick="modal('vst-paccompania-insert','pac_ide=<?php echo $pac_ide ?>')">
 			<i class="fa fa-plus"></i>
-			Vincular Empresa
+			Vincular Empresa 03-12-24
 		</button>
 </div>
 <?php if(count($row)>0): ?>

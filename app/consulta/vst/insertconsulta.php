@@ -4,13 +4,12 @@ extract($_POST);
 $row=$mconsulta->porpac_ide($pac_ide);
 //var_dump($row);
 
-
 ?>
 <div id="mensaje"></div> 
-<div class="">
+<!-- <div class="">
 	<label for="" class="label control-label col-sm-12 bolder">Datos de la Consulta</label>
-</div>
-
+</div> -->
+<div>
 <div class="alert alert-info">
 	<i class="fa fa-exclamation-triangle fa-3x pull-left red"></i> Por favor rellene el siguiente formulario para agregar consulta.
 </div>
@@ -19,7 +18,7 @@ $row=$mconsulta->porpac_ide($pac_ide);
 	
 	<fieldset><legend>Datos de la Consulta</legend>	
 
-		<input type="text" name="pac_ide" class="form-control" value="<?php echo $pac_ide; ?>"> 
+		<input type="hidden" name="pac_ide" class="form-control" value="<?php echo $pac_ide; ?>"> 
 		
 		<div class="form-group col-sm-3">
 			<label for="" class="label control-label col-sm-12 bolder">Empresa</label>
@@ -103,10 +102,10 @@ $row=$mconsulta->porpac_ide($pac_ide);
 		</div>
 	</fieldset>
 </form>
+</div>
 <script>
 	$(function(){
 		$('.chosen').chosen();
-
 		$( ".fecha" ).datepicker({
 			autoclose:true
 	    }).next().on(ace.click_event, function(){

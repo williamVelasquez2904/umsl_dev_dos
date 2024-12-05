@@ -1,7 +1,8 @@
 <?php require '../../../cfg/base.php';  
+/*
 		var_dump("<PRE>");
 		var_dump("En datos personales pac ide = ".$pac_ide);
-		var_dump("</pre>");
+		var_dump("</pre>");*/
 //var_dump($pac_ide);
 $row = $mpatient->poride($pac_ide);
 $row_fich = $mpermfich->poride(1);

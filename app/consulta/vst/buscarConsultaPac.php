@@ -1,10 +1,10 @@
-<?php 
+<?php
 require '../../../cfg/base.php';
 $row = $mpatient->lista();
  ?>
 <form action="" class="op0">
 	<div class="form-group">
-		<label for="" class="label control-label col-sm-12 bolder">Buscar Paciente:</label>
+		<label for="" class="label control-label col-sm-12 bolder">Buscar Paciente </label>
 		<div class="col-sm-9">
 			<input type="text" class="form-control" id="buscarpaciente" name="pac_ide">
 		</div>
@@ -17,7 +17,7 @@ $row = $mpatient->lista();
 <div class="clearfix"></div>
 <div class="perfil"></div>
 <div class="clearfix"></div>
-<div class="listaConsultas"></div>
+<div class="lista"></div>
 <div class="clearfix"></div>
 <div class="consulta"></div>
 <div class="clearfix"></div>
@@ -77,7 +77,7 @@ $row = $mpatient->lista();
 						load('vst-consulta-insert','','.perfil');
 					} else {
 						// load('vst-patient-datos.personales','pac_ide='+data.trim(),'.perfil');
-						load('vst-consulta-listaConsultas','pac_ide='+data.trim(),'.listaConsultas');
+						load('vst-consulta-listaConsultas','pac_ide='+data.trim(),'.lista');
 						load('vst-consulta-insertconsulta','pac_ide='+data.trim(),'.consulta');
 
 						
