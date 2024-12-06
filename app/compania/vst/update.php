@@ -1,11 +1,11 @@
-<?php require '../../../cfg/base.php'; ?>
-<?php foreach($mcompania->poride($ide) as $r): ?>
+<?php require '../../../cfg/base.php';
+foreach($mcompania->poride($ide) as $r): ?>
 	<form action="" class="op2 form-horizontal">
-		<?php echo $fn->modalHeader('Editar Empresa') ?>
+		<?php echo $fn->modalHeader('Editar Empresa o Institución') ?>
 		<div class="modal-body">
 			<div class="msj"></div>
 			<div class="form-group">
-				<label for="" class="control-label col-sm-4 bolder">R.I.F.:</label>
+				<label for="" class="control-label col-sm-4 bolder">RIF:</label>
 				<div class="col-sm-8">
 					<input type="text" class="form-control" name="rif" value="<?php echo $r->compania_rif ?>">
 				</div>
@@ -14,6 +14,12 @@
 				<label for="" class="control-label col-sm-4 bolder">Razón Social:</label>
 				<div class="col-sm-8">
 					<input type="text" class="form-control" name="nom" value="<?php echo $r->compania_nombre ?>">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="control-label col-sm-4 bolder">Nombre alternativo:</label>
+				<div class="col-sm-8">
+					<input type="text" class="form-control" name="nom2" value="<?php echo $r->compania_nombre2 ?>">
 				</div>
 			</div>
 			<div class="form-group">
@@ -34,8 +40,6 @@
 					<input type="text" class="form-control" name="cor" value="<?php echo $r->compania_email ?>">
 				</div>
 			</div>
-
-
 		</div>
 		<?php echo $fn->modalFooter(1) ?>
 		<input type="hidden" class="form-control" name="ide" value="<?php echo $r->compania_ide ?>">
@@ -49,13 +53,19 @@
 			errorClass: 'help-block',
 			focusInvalid: true,
 			rules: {
-				des: {
+				rif: {
+					required: true,
+				},
+				nom: {
 					required: true,
 				}
 			},
 
 			messages: {
-				des: {
+				rif: {
+					required: 'Obligatorio',
+				},
+				nom: {
 					required: 'Obligatorio',
 				}
 			},

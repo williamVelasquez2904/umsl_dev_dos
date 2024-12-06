@@ -1,19 +1,15 @@
-<?php require '../../../cfg/base.php'; ?>
-<?php $row = $mcompania->lista() ?>
-<?php if(count($row)>0): ?>
+<?php require '../../../cfg/base.php';
+$row = $mcompania->lista();
+if(count($row)>0): ?>
 	<div class="table-responsive">
 		<table class="table table-hover table-bordered">
 			<thead>
 				<tr>
-					<th>R.I.F.</th>
-					<th>Nombre de la Razón Social</th>
+					<th>RIF</th>
+					<th>Nombre o Razón Social</th>
 					<th>Telefono</th>
 					<th>Dirección</th>
 					<th>Email</th>
-					<th>Valor Dolar</th>
-					<th>Ult. Fact.</th>
-					<th>Ult. Cont.</th>
-
 					<th>Opciones</th>
 				</tr>
 			</thead>
@@ -21,7 +17,7 @@
 				<?php foreach($row as $r): ?>
 					<tr>
 						<td align="center"><?php echo $r->compania_rif ?></td>
-						<td><?php echo $r->compania_nombre .' '.$r->compania_nombre2; ?></td>
+						<td><?php echo $r->compania_nombre .' <b>'.$r->compania_nombre2.'</b>'; ?></td>
 						<td><?php echo $r->compania_telefono ?></td>
 						<td><?php echo $r->compania_direccion ?></td>
 						<td><?php echo $r->compania_email ?></td>

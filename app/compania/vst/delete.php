@@ -1,14 +1,44 @@
-<?php require '../../../cfg/base.php'; ?>
-<?php foreach($mtienda->poride($ide) as $r): ?>
-	<form action="" class="op2 form-horizontal">
-		<?php echo $fn->modalHeader('Borrar Empresa') ?>
+<?php require '../../../cfg/base.php';
+foreach($mcompania->poride($ide) as $r): ?>
+	<form action="" class="op3 form-horizontal">
+		<?php echo $fn->modalHeader('Borrar Empresa o Institución') ?>
 		<div class="modal-body">
 			<div class="alert alert-danger">¿Realmente desea borrar el registro seleccionado?</div>
 			<div class="msj"></div>
 			<div class="form-group">
-				<label for="" class="control-label col-sm-3 bolder">Empresa:</label>
-				<div class="col-sm-9">
-					<input type="text" class="form-control" name="des" value="<?php echo $r->compania_rif .' '.$r->compania_nombre ?>" disabled>
+				<label for="" class="control-label col-sm-4 bolder">RIF:</label>
+				<div class="col-sm-8">
+					<input type="text" class="form-control" name="rif" value="<?php echo $r->compania_rif ?>" disabled>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="control-label col-sm-4 bolder">Razón Social:</label>
+				<div class="col-sm-8">
+					<input type="text" class="form-control" name="nom" value="<?php echo $r->compania_nombre ?>" disabled>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="control-label col-sm-4 bolder">Nombre alternativo:</label>
+				<div class="col-sm-8">
+					<input type="text" class="form-control" name="nom2" value="<?php echo $r->compania_nombre2 ?>" disabled>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="control-label col-sm-4 bolder">Dirección:</label>
+				<div class="col-sm-8">
+					<input type="text" class="form-control" name="dir" value="<?php echo $r->compania_direccion ?>" disabled>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="control-label col-sm-4 bolder">Telefono:</label>
+				<div class="col-sm-8">
+					<input type="text" class="form-control" name="tel" value="<?php echo $r->compania_telefono ?>" disabled>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="control-label col-sm-4 bolder">Email:</label>
+				<div class="col-sm-8">
+					<input type="text" class="form-control" name="cor" value="<?php echo $r->compania_email ?>" disabled>
 				</div>
 			</div>
 		</div>
@@ -18,7 +48,7 @@
 <?php endforeach; ?>
 <script>
 	$(function(){
-		var formulario = '.op2';
+		var formulario = '.op3';
 		$(formulario).validate({
 			errorElement: 'div',
 			errorClass: 'help-block',
@@ -47,7 +77,7 @@
 			submitHandler: function (form) {
 				$.post('prc-mcompania-delete',$(formulario).serialize(),function(data){
 					if(data==1) {
-						load('vst-tienda-lista','','.lista');
+						load('vst-compania-lista','','.lista');
 						alert('Registro eliminado correctamente');
 						cerrarmodal();
 					} else {

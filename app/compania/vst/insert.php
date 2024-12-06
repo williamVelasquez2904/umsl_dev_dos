@@ -1,6 +1,6 @@
 <?php require '../../../cfg/base.php'; ?>
 <form action="" class="op1 form-horizontal">
-	<?php echo $fn->modalHeader('Agregar Empresa') ?>
+	<?php echo $fn->modalHeader('Agregar Empresa o Institución') ?>
 	<div class="modal-body">
 		<div class="msj"></div>
 		<div class="form-group">
@@ -13,6 +13,12 @@
 			<label for="" class="control-label col-sm-4 bolder">Razón Social:</label>
 			<div class="col-sm-8">
 				<input type="text" class="form-control" name="nom">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="" class="control-label col-sm-4 bolder">Nombre alternativo:</label>
+			<div class="col-sm-8">
+				<input type="text" class="form-control" name="nom2">
 			</div>
 		</div>
 		<div class="form-group">
@@ -47,11 +53,17 @@
 			rules: {
 				rif: {
 					required: true,
+				},
+				nom: {
+					required: true,
 				}
 			},
 
 			messages: {
 				rif: {
+					required: 'Obligatorio',
+				},
+				nom: {
 					required: 'Obligatorio',
 				}
 			},
