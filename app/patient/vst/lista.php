@@ -1,5 +1,5 @@
 <?php //require '../../../cfg/base.php'; ?>
-<?php $row = $mpatient->lista() ?>
+<?php $row = $mpatient->paciente_lista() ?>
 <?php if(count($row)>0): ?>
 	<div class="table-responsive">
 		<table class="table table-hover table-bordered">
@@ -16,12 +16,17 @@
 			</thead>
 			<tbody>
 				<?php foreach($row as $r): ?>
+					<?php  
+					if ($r->pac_genero==1) 
+					?>
 					<tr>
 						<td align="center"><?php echo $r->pac_ide ?></td>						
 						<td><?php echo $r->pac_tipo.'-'.$r->pac_numiden ?></td>
 						<td><?php echo $r->pac_nombre ?></td>
 						<td><?php echo $r->pac_apellido ?></td>
-						<td><?php echo $r->pac_genero ?></td>
+						<td><?php 
+							echo $r->pac_genero."-".$r->pac_genero==1 ? 'Masculino' : 'Femenino';?>
+						</td>
 						<td><?php echo $r->pac_fecnaci ?></td>
 						<td><?php echo $r->pac_profesion ?></td>
 					</tr>

@@ -9,6 +9,12 @@
 		return Enlace::sql($sql,$datos,3,'');
 	}
 
+	public function paciente_lista() {
+		$sql = "SELECT * FROM vw_paciente_lista ORDER BY pac_ide ASC";
+		$datos = array(0);
+		return Enlace::sql($sql,$datos,3,'');
+	}
+
 	public function listasinide($ide) {
 		$sql = "SELECT * FROM vw_paciente WHERE clien_ide<>? ORDER BY clien_nombre1 ASC";
 		$datos = array($ide);
