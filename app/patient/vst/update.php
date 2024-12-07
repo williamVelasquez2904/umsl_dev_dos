@@ -6,15 +6,17 @@
 		<fieldset><legend>Datos del Paciente</legend>	
 			<div class="form-group col-sm-2">
 				<label for="" class="label control-label col-sm-12 bolder">Nacionalidad </label>
-				<div class="col-sm-10" id="tipcli">
-					<select class="form-control chosen" title="Agregar" name="tipcli" id="tipcli" onchange="load('vst-tipclien-select','tipcli_ide='+this.value,'#tipcli');">
+				<div class="col-sm-10" id="tipo_pac">
+					<select class="form-control chosen" title="Agregar" name="tipo_pac" id="tipo_pac" onchange="load('vst-tipclien-select','tipcli_ide='+this.value,'#tipcli');">
 						<option value=""></option>
 						<?php foreach($mtipclien->lista() as $p): ?>
-							<option value="<?php echo $p->tipcli_ide ?>" <?php echo $fn->select($p->tipcli_ide,$r->clien_tipcli) ?>><?php echo $p->tipcli_descrip ?></option>
+							<option value="<?php echo $p->tipcli_ide ?>" <?php echo $fn->select($p->tipcli_ide,$r->pac_tipo) ?>><?php echo $p->tipcli_descrip ?></option>
 						<?php endforeach; ?>
 					</select>
 				</div>
 			</div>
+
+
 
 			<div class="form-group col-sm-2
 			">

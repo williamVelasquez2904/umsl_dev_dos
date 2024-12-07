@@ -91,7 +91,7 @@
 */		$sql = "SELECT sf_patient(?,?,?,?,?,?,?,?,?,?,?,?,?) AS res";
 		$datos = array(
 			$pac_ide, // Identificador
-			$tipcli,
+			$tipo_pac,
 			$ced,
 			Funciones::may($nom),
 			Funciones::may($ape),
