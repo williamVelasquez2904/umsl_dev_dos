@@ -163,7 +163,7 @@ $row=$mconsulta->porpac_ide($pac_ide);
 
 					$.post('prc-mconsulta-insert',$(formulario).serialize(),function(data){
 						if(!isNaN(data)) {
-							load('vst-consulta-listaConsultas','pac_ide=<?php echo $pac_ide; ?>','.listaConsultas');
+							load('vst-consulta-listaConsultas','pac_ide=<?php echo $pac_ide; ?>','.lista');
 							if(confirm('Registro agregado correctamente.\n¿Desea agregar otro registro?')==true) {
 								$(formulario).each(function(){ this.reset() })
 							} else {

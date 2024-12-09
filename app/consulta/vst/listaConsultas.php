@@ -11,7 +11,7 @@ $row = $mconsulta->listaporpaciente($pac_ide);
 		<table class="table table-hover table-bordered">
 			<thead>
 				<tr>
-					<th>Id</th>
+					<th>Id 08 ..</th>
 					<th>FECHA</th>
 					<th>NOMBRE</th>
 					<th>CEDULA</th>
@@ -35,7 +35,7 @@ $row = $mconsulta->listaporpaciente($pac_ide);
 						<td><?php echo $texto_resultado ?></td>
 						<td>
 							<div class="btn-group">
-								<button class="btn btn-success btn-xs" title="Actualizar" onclick="modal('vst-cons-update','ide=<?php echo $r->cons_ide ?>')">
+								<button class="btn btn-success btn-xs" title="Actualizar" onclick="modal('vst-consulta-update','ide=<?php echo $r->cons_ide ?>')">
 									<i class="fa fa-edit"></i>
 								</button>
 								<button class="btn btn-danger btn-xs" title="Borrar" onclick="modal('vst-cons-delete','ide=<?php echo $r->cons_ide ?>')">
