@@ -47,9 +47,8 @@ $row=$mconsulta->porpac_ide($pac_ide);
 
 		<div class="form-group col-sm-2">
 			<label for="" class="label control-label col-sm-12 bolder">Motivo</label>
-			<div class="col-sm-12" id="mone">
+			<div class="col-sm-12" id="mot">
 				<select class="form-control chosen" title="Moneda" name="mot" id="mot" >
-					
 					<?php foreach($mmotivo->lista() as $m): ?>
 						<option value="<?php echo $m->motivo_ide ?>"
 							<?php 

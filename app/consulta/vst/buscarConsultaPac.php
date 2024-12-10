@@ -79,7 +79,6 @@ $row = $mpatient->lista();
 						// load('vst-patient-datos.personales','pac_ide='+data.trim(),'.perfil');
 						load('vst-consulta-listaConsultas','pac_ide='+data.trim(),'.lista');
 						load('vst-consulta-insertconsulta','pac_ide='+data.trim(),'.consulta');
-
 						
 					}
 				})

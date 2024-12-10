@@ -33,8 +33,18 @@
 		$sql = "SELECT sf_consulta(?,?,?,?,?,?,?,?) AS res";
 		extract($_POST); 
 		//$datos = array(0,Funciones::may($des),1,$_SESSION['s_clien_ide'])	;
-				$datos = array(0,$pac_ide,$emp,$mot,$fec,$resul,1,$_SESSION['s_usua_ide']);
+				$datos = array(0,$pac_ide,$emp,$mot,$fec,0,1,$_SESSION['s_usua_ide']);
 
 		return Enlace::sql($sql,$datos,4,'res');
+
+	}
+
+	public function update() {
+
+		$sql = "SELECT sf_consulta(?,?,?,?,?,?,?,?) AS res";
+		extract($_POST);
+         $datos = array(0,0,$emp,$mot,$fec,$resul,1,$_SESSION['s_usua_ide']);
+/*		 $datos = array($ide,$rif,$nom,$nom2,$dir,$tel,$cor,2,$_SESSION['s_usua_ide']);
+*/		return Enlace::sql($sql,$datos,4,'res');
 	}
 } ?>
