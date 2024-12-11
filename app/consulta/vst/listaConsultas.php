@@ -25,14 +25,18 @@ $row = $mconsulta->listaporpaciente($pac_ide);
 					$texto_resultado="";
 					if ($r->cons_res_ide == 1)
 						$texto_resultado='Apto';
+					
+					if ($r->cons_res_ide == 0)
+						$texto_resultado='Por Asignar';
 					?>
+
 					<tr>
 						<td align="center"><?php echo $r->cons_ide ?></td>
 						<td align="center"><?php echo $r->cons_fecha ?></td>
 						<td><?php echo $r->pac_nombre.', '.$r->pac_apellido  ?></td>
 						<td><?php echo $r->pac_numiden ?></td>
 						<td><?php echo $r->motivo_descrip ?></td>
-						<td><?php echo $texto_resultado ?></td>
+						<td><?php echo $r->cons_res_ide.' - '.$texto_resultado ?></td>
 						<td>
 							<div class="btn-group">
 								<button class="btn btn-success btn-xs" title="Actualizar" onclick="modal('vst-consulta-update','ide=<?php echo $r->cons_ide ?>')">

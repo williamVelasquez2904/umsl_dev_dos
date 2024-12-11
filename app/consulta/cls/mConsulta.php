@@ -43,7 +43,7 @@
 
 		$sql = "SELECT sf_consulta(?,?,?,?,?,?,?,?) AS res";
 		extract($_POST);
-         $datos = array(0,0,$emp,$mot,$fec,$resul,1,$_SESSION['s_usua_ide']);
+         $datos = array(0,0,$emp,$mot,$fec,0,2,$_SESSION['s_usua_ide']);
 /*		 $datos = array($ide,$rif,$nom,$nom2,$dir,$tel,$cor,2,$_SESSION['s_usua_ide']);
 */		return Enlace::sql($sql,$datos,4,'res');
 	}

@@ -44,8 +44,8 @@
 				<div class="col-sm-12 col-xs-12">
 					<select class="form-control chosen" name="sexo" id="sexo">
 						<option value=""></option>
-						<option value=1>Masculino</option>
-						<option value=2>Femenino</option>
+						<option value="1" <?php if ($r->pac_genero==1) echo 'selected';?>>Masculino</option>
+						<option value="2" <?php if ($r->pac_genero==2) echo 'selected'?>>Femenino</option>
 					</select>
 				</div>
 		    </div>	
