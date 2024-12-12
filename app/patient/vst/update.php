@@ -59,7 +59,7 @@
 		<div class="form-group col-sm-7">
 			<label for="" class="label control-label col-sm-12 bolder">Dirección:</label>
 			<div class="col-sm-12">
-				<input type="text" name="dir" class="form-control" value="<?php echo $r->pac_direcci ?>">
+				<input type="text" name="dir" class="form-control" value="<?php echo $r->pac_direcci ?>"> 
 			</div>
 		</div>
 						
@@ -109,7 +109,7 @@
 <script>
 	$(function(){
 		$('.chosen').chosen();
-		$('.fecha').datepicker({format:'dd-mm-yyyy',endDate:'-18y'});
+		$('.fecha').datepicker({format:'dd-mm-yyyy',endDate:'-1y'});
 	})
 </script>
 

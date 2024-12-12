@@ -1,6 +1,6 @@
 <?php require '../../../cfg/base.php';
 //var_dump($ide);
-/*$row = $mconsulta->poride($ide);var_dump($row);*/
+$row = $mconsulta->poride($ide);var_dump($row);
 foreach($mconsulta->poride($ide) as $r): ?>
 	<form action="" class="op2 form-horizontal">
 		<?php echo $fn->modalHeader('Editar Consulta') ?>

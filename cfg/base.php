@@ -12,16 +12,15 @@ $archivos = array(
 		'enfermedad'=>array('mEnfermedad','cEnfermedad'),
 		'tipclien'  =>array('mTipclien','cTipclien'),
 		'tipousua'  =>array('mTipousua','cTipousua'),
-		'motivo'  =>array('mMotivo','cMotivo'),
 		'permisos'  =>array('mPermisos','cPermisos'),
 		'permfich'  =>array('mPermfich','cPermfich'),
 		'profesion' =>array('mProfesion','cProfesion'),
 		'patient'   =>array('mPatient','cPatient'),
 		'paciente'  =>array('mPaciente','cPaciente'),
-		'compania'  =>array('mCompania','cCompania'),
-		'paccompania'  =>array('mPaccompania','cPaccompania'),
+		'compania'  =>array('mCompania','cCompania'),		
 		'tienda'    =>array('mTienda','cTienda'),
-		'reportes'  =>array('mReportes','cReportes'),		
+		'inforepi'  =>array('mInforepi','cInforepi'),
+		'reportes'  =>array('mReportes','cReportes'),
 		'auditoria' =>array('mAuditoria','cAuditoria')
 	);
 # Instanciacin de clases
