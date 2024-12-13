@@ -21,6 +21,7 @@ $archivos = array(
 		'tienda'    =>array('mTienda','cTienda'),
 		'inforepi'  =>array('mInforepi','cInforepi'),
 		'reportes'  =>array('mReportes','cReportes'),
+		'motivo'  =>array('mMotivo','cMotivo'),
 		'auditoria' =>array('mAuditoria','cAuditoria')
 	);
 # Instanciacin de clases

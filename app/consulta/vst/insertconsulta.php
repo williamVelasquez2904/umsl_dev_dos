@@ -11,7 +11,7 @@ $row=$mconsulta->porpac_ide($pac_ide);
 </div> -->
 <div>
 <div class="alert alert-info">
-	<i class="fa fa-exclamation-triangle fa-3x pull-left red"></i> 10-12-2024 Por favor rellene el siguiente formulario para agregar consulta.
+	<i class="fa fa-exclamation-triangle fa-3x pull-left red"></i> 12-12-2024 Por favor rellene el siguiente formulario para agregar consulta.
 </div>
 <form action="" class="datosconsulta">
 	<div class="msj-errores" id="errores_contrato"></div>
@@ -33,13 +33,16 @@ $row=$mconsulta->porpac_ide($pac_ide);
 			</div>
 		</div>
 		<div class="form-group col-sm-3">
-			<label for="" class="label control-label col-sm-12 bolder">Evento</label>
+			<label for="" class="label control-label col-sm-12 bolder">Informe	</label>
 			<div class="col-sm-12" >
 				<select class="form-control chosen" title="Empresa" name="emp" id="emp">
 					<option value=""></option>
-					<?php foreach($mcompania->lista() as $c): ?>
-						<option value="<?php echo $c->compania_ide; ?>">
-					<?php echo $c->compania_ide." - ".$c->compania_nombre; ?></option>
+					<?php foreach($minforepi->lista() as $i): ?>
+						<option value="<?php echo $i->inforepi_ide; ?>">
+					<?php echo $i->inforepi_descripcion." - ".$i->compania_nombre." | ".date_format(date_create($i->inforepi_fecha_desde), 'd-m-Y')." | ".date_format(date_create($i->inforepi_fecha_hasta), 'd-m-Y') ; ?>
+				
+						
+					</option>
 					<?php endforeach; ?>
 				</select>
 
@@ -63,11 +66,7 @@ $row=$mconsulta->porpac_ide($pac_ide);
 			<div class="col-sm-12" id="mot">
 				<select class="form-control chosen" title="Moneda" name="mot" id="mot" >
 					<?php foreach($mmotivo->lista() as $m): ?>
-						<option value="<?php echo $m->motivo_ide ?>"
-							<?php 
-							if ($m->motivo_ide==1) echo "selected";
-							?>
-						>
+						<option value="<?php echo $m->motivo_ide ?>">
 							<?php echo $m->motivo_ide.'-'. $m->motivo_descrip ?></option>
 					<?php endforeach; ?>
 				</select>
