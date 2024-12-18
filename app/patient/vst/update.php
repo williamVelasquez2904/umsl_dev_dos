@@ -3,7 +3,7 @@
 <?php foreach($mpatient->poride($pac_ide) as $r): ?>
 	<form action="" class="op2-pac well">
 		<div class="msj-pac"></div>
-		<fieldset><legend>Datos del Paciente</legend>	
+		<fieldset><legend>16.12.24 Datos del Paciente</legend>	
 			<div class="form-group col-sm-2">
 				<label for="" class="label control-label col-sm-12 bolder">Nacionalidad </label>
 				<div class="col-sm-10" id="tipo_pac">
@@ -15,8 +15,6 @@
 					</select>
 				</div>
 			</div>
-
-
 
 			<div class="form-group col-sm-2
 			">
@@ -83,7 +81,7 @@
 		<div class="form-group col-sm-3">
 			<label for="" class="label control-label col-sm-12 bolder">Teléfono Móvil:</label>
 			<div class="col-sm-12">
-				<input type="text" name="mov" class="form-control">
+				<input type="text"  class="form-control" name="mov" id="mov" value="<?php echo $r->pac_telmovi ?>">
 			</div>
 		</div>
 		<div class="form-group col-sm-4">

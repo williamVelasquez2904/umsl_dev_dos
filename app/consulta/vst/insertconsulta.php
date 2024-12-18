@@ -11,7 +11,7 @@ $row=$mconsulta->porpac_ide($pac_ide);
 </div> -->
 <div>
 <div class="alert alert-info">
-	<i class="fa fa-exclamation-triangle fa-3x pull-left red"></i> 12-12-2024 Por favor rellene el siguiente formulario para agregar consulta.
+	<i class="fa fa-exclamation-triangle fa-3x pull-left red"></i>[insertconsulta]. 17-12-2024  Por favor rellene el siguiente formulario para agregar consulta.
 </div>
 <form action="" class="datosconsulta">
 	<div class="msj-errores" id="errores_contrato"></div>
@@ -19,21 +19,21 @@ $row=$mconsulta->porpac_ide($pac_ide);
 	<fieldset><legend>Datos de la Consulta</legend>	
 
 		<input type="hidden" name="pac_ide" class="form-control" value="<?php echo $pac_ide; ?>"> 
-		
+<!--		
 		<div class="form-group col-sm-3">
-			<label for="" class="label control-label col-sm-12 bolder">Empresa</label>
+ 			<label for="" class="label control-label col-sm-12 bolder">Empresa</label>
 			<div class="col-sm-12" id="tienda">
 				<select class="form-control chosen" title="Empresa" name="emp" id="emp">
 					<option value=""></option>
-					<?php foreach($mcompania->lista() as $c): ?>
-						<option value="<?php echo $c->compania_ide; ?>">
-					<?php echo $c->compania_ide." - ".$c->compania_nombre; ?></option>
-					<?php endforeach; ?>
+					<?php //foreach($mcompania->lista() as $c): ?>
+						<option value="<?php //echo $c->compania_ide; ?>">
+					<?php //echo $c->compania_ide." - ".$c->compania_nombre; ?></option>
+					<?php //endforeach; ?>
 				</select>
 			</div>
-		</div>
-		<div class="form-group col-sm-3">
-			<label for="" class="label control-label col-sm-12 bolder">Informe	</label>
+		</div> -->
+		<div class="form-group col-sm-8">
+			<label for="" class="label control-label col-sm-12 bolder">Empresa / Informe Epid.</label>
 			<div class="col-sm-12" >
 				<select class="form-control chosen" title="Empresa" name="emp" id="emp">
 					<option value=""></option>

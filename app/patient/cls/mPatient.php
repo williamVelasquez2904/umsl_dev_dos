@@ -85,7 +85,7 @@
 		return Enlace::sql($sql,$datos,4,'res');
 	}
 
-	public function update() {
+	public function update() { 
 		extract($_POST);
 /*		$sql = "SELECT sf_patient(?,?,?,?,?,?,?,?,?) AS res";
 */		$sql = "SELECT sf_patient(?,?,?,?,?,?,?,?,?,?,?,?,?) AS res";
