@@ -1,4 +1,4 @@
-<?php require '../../../cfg/base.php'; 
+<?php require '../../../cfg/base.php';
 extract($_POST);
 $row_paciente= $mpatient->poride($pac_ide);
 $ced="";

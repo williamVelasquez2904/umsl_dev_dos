@@ -1,4 +1,4 @@
-<?php class mCompania { 
+<?php class mCompania {
 
 	function __clone() {}
 	function __construct() {}
@@ -16,7 +16,11 @@
 
 	public function insert() {
 		$sql = "SELECT sf_compania(?,?,?,?,?,?,?,?,?) AS res";
-		extract($_POST); $datos = array(0,$rif,$nom,$nom2,$dir,$tel,$cor,1,$_SESSION['s_usua_ide']);
+		extract($_POST); $datos = array(0,$rif,
+			Funciones::may($nom),
+			Funciones::may($nom2),
+			//$nom,$nom2,
+			$dir,$tel,$cor,1,$_SESSION['s_usua_ide']);
 		return Enlace::sql($sql,$datos,4,'res');
 	}
 
