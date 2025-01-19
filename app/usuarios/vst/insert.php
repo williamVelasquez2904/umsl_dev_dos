@@ -1,7 +1,7 @@
 <?php require '../../../cfg/base.php'; ?>
 <form action="" class="op1-clien well">
 	<div class="msj-clien"></div>
-	<fieldset><legend>11 Datos Personales (Registro de Usuario)</legend>	
+	<fieldset><legend>[insert 15-01-2025] Datos Personales (Registro de Usuario)</legend>	
 		
 		<div class="form-group col-sm-3">
 			<label for="" class="label control-label col-sm-12 bolder">Tipo:</label>

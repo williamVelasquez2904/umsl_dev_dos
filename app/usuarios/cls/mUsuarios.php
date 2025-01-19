@@ -131,12 +131,15 @@
 
 
 	public function insert() {
-
 		extract($_POST);
-		var_dump($nom1);
-		$sql = "SELECT sf_usuarios(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) AS res";
+		//var_dump($nom1);
+		$sql = "SELECT sf_usuarios(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) AS res";
 
-		$datos = array(0,$tipcli,$ced,Funciones::may($nom1),Funciones::may($ape1),date('Y-m-d',strtotime($fnac)),Funciones::may($dir),$mov,Funciones::may($corre),Funciones::may($login),md5($clave),$tipo,$tie,1,$_SESSION['s_usua_ide']);
+		$datos = array(0,$tipcli,$ced,
+			Funciones::may($nom1),
+			Funciones::may($nom2),
+			Funciones::may($ape1),
+			Funciones::may($ape2),date('Y-m-d',strtotime($fnac)),Funciones::may($dir),$mov,Funciones::may($corre),Funciones::may($login),md5($clave),$tipo,$tie,1,$_SESSION['s_usua_ide']);
 
 		return Enlace::sql($sql,$datos,4,'res');
 
