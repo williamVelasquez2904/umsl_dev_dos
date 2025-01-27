@@ -2,13 +2,13 @@
 <?php
 //var_dump($_POST);
 
-$row = $motivo->lista() ?>
+$row = $mmotivo->lista() ?>
 <?php if(count($row)>0): ?>
 	<div class="table-responsive">
 		<table class="table table-hover table-bordered">
 			<thead>
 				<tr>
-					<th>Id</th>
+					<th>Id 23 ene 25</th>
 					<th>Motivo</th>
 					<th>Opciones</th>
 				</tr>
@@ -16,14 +16,14 @@ $row = $motivo->lista() ?>
 			<tbody>
 				<?php foreach($row as $r): ?>
 					<tr>
-						<td align="center"><?php echo $r->enf_ide ?></td>
-						<td><?php echo $r->enf_descrip ?></td>
+						<td align="center"><?php echo $r->motivo_ide ?></td>
+						<td><?php echo $r->motivo_descrip ?></td>
 						<td>
 							<div class="btn-group">
-								<button class="btn btn-success btn-xs" title="Actualizar" onclick="modal('vst-enfermedad-update','ide=<?php echo $r->enf_ide ?>')">
+								<button class="btn btn-success btn-xs" title="Actualizar" onclick="modal('vst-motivo-update','ide=<?php echo $r->motivo_ide ?>')">
 									<i class="fa fa-edit"></i>
 								</button>
-								<button class="btn btn-danger btn-xs" title="Borrar" onclick="modal('vst-enfermedad-delete','ide=<?php echo $r->enf_ide ?>')">
+								<button class="btn btn-danger btn-xs" title="Borrar" onclick="modal('vst-motivo-delete','ide=<?php echo $r->motivo_ide ?>')">
 									<i class="fa fa-trash"></i>
 								</button>
 							</div>

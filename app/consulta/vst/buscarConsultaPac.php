@@ -1,10 +1,10 @@
-<?php
+<?php 
 require '../../../cfg/base.php';
 $row = $mpatient->lista();
  ?>
 <form action="" class="op0">
 	<div class="form-group">
-		<label for="" class="label control-label col-sm-12 bolder">10-12-204 Buscar Paciente </label>
+		<label for="" class="label control-label col-sm-12 bolder">[buscarConsulPac]. 25-01-2025 Buscar Paciente </label>
 		<div class="col-sm-9">
 			<input type="text" class="form-control" id="buscarpaciente" name="pac_ide">
 		</div>
@@ -21,7 +21,6 @@ $row = $mpatient->lista();
 <div class="clearfix"></div>
 <div class="consulta"></div>
 <div class="clearfix"></div>
-
 
 <script>
 	$(function(){
@@ -51,13 +50,11 @@ $row = $mpatient->lista();
 					required: true,
 				}
 			},
-
 			messages: {
 				clien: {
 					required: 'Obligatorio',
 				}
 			},
-
 			invalidHandler: function (event, validator) { //display error alert on form submit   
 				$('.alert-danger', $(formulario)).show();
 			},
@@ -65,21 +62,18 @@ $row = $mpatient->lista();
 			highlight: function (e) {
 				$(e).closest('.form-group').removeClass('has-info').addClass('has-error');
 			},
-
 			success: function (e) {
 				$(e).closest('.form-group').removeClass('has-error').addClass('has-info');
 				$(e).remove();
 			},
-
 			submitHandler: function (form) {
 				$.post('prc-cpatient-buscar',$(formulario).serialize(),function(data){
 					if(data.trim()=='no') {
-						load('vst-consulta-insert','','.perfil');
+						load('vst-patient-insert','','.perfil');
 					} else {
 						// load('vst-patient-datos.personales','pac_ide='+data.trim(),'.perfil');
 						load('vst-consulta-listaConsultas','pac_ide='+data.trim(),'.lista');
 						load('vst-consulta-insertconsulta','pac_ide='+data.trim(),'.consulta');
-						
 					}
 				})
 			},

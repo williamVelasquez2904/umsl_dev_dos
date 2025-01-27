@@ -11,7 +11,7 @@ $row=$mconsulta->porpac_ide($pac_ide);
 </div> -->
 <div>
 <div class="alert alert-info">
-	<i class="fa fa-exclamation-triangle fa-3x pull-left red"></i>[insertconsulta]. 17-12-2024  Por favor rellene el siguiente formulario para agregar consulta.
+	<i class="fa fa-exclamation-triangle fa-3x pull-left red"></i>[insertconsulta]. 27-01-2025  Por favor rellene el siguiente formulario para agregar consulta.
 </div>
 <form action="" class="datosconsulta">
 	<div class="msj-errores" id="errores_contrato"></div>

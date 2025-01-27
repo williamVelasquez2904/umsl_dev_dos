@@ -1,10 +1,6 @@
 <?php require '../../../cfg/base.php'; 
-// $row = $mbanco->lista() 
 extract($_POST);
-/*$row = $mconsulta->listaporpaciente($pac_ide);exit;
-*/
 $row = $mconsulta->listaporpaciente($pac_ide);
-
 ?>
 <?php if(count($row)>0): ?>
 	<div class="table-responsive">
