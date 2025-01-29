@@ -1,30 +1,29 @@
 <?php require '../../../cfg/base.php'; ?>
 <?php
 //var_dump($_POST);
-$row = $menfermedad->porconsul($ide) // enfermedades reportadas en una consulta
-/*$row = $mconsulta->lista_enfer($ide) */
-?>
+
+$row = $menfermedad->lista() ?>
 <?php if(count($row)>0): ?>
 	<div class="table-responsive">
-		<table class="table2 table-hover table-bordered " width="100%" align="center" >
+		<table class="table table-hover table-bordered">
 			<thead>
 				<tr>
 					<th>Id</th>
 					<th>Enfermedad</th>
-					<th>Opción</th>
+					<th>Opciones</th>
 				</tr>
 			</thead>
 			<tbody>
 				<?php foreach($row as $r): ?>
 					<tr>
-						<td align="center"><?php echo $r->consenf_ide ?></td>
-						<td><?php echo $r->enfermedad ?></td>
+						<td align="center"><?php echo $r->enf_ide ?></td>
+						<td><?php echo $r->enf_descrip ?></td>
 						<td>
 							<div class="btn-group">
-								<button class="btn btn-success btn-xs" title="Actualizar" onclick="modal('vst-banco-update','ide=<?php echo $r->banco_ide ?>')">
+								<button class="btn btn-success btn-xs" title="Actualizar" onclick="modal('vst-enfermedad-update','ide=<?php echo $r->enf_ide ?>')">
 									<i class="fa fa-edit"></i>
 								</button>
-								<button class="btn btn-danger btn-xs" title="Borrar" onclick="modal('vst-banco-delete','ide=<?php echo $r->banco_ide ?>')">
+								<button class="btn btn-danger btn-xs" title="Borrar" onclick="modal('vst-enfermedad-delete','ide=<?php echo $r->enf_ide ?>')">
 									<i class="fa fa-trash"></i>
 								</button>
 							</div>
@@ -40,6 +39,6 @@ $row = $menfermedad->porconsul($ide) // enfermedades reportadas en una consulta
 <?php endif; ?>	
 <script>
 	$(function(){
-		$('.table2').dataTable();
+		$('.table').dataTable();
 	})
 </script>

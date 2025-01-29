@@ -1,7 +1,7 @@
 <?php require '../../../cfg/base.php'; 
 echo $fn->modalWidth('80%');
 $r = $mconsulta->poride($ide) ?>
-<?php echo $fn->modalHeader("Detalles Consulta <b> $ide</b>") ?>
+<?php echo $fn->modalHeader("[verdetalles.php] 29-01-25 Detalles Consulta <b> $ide</b>") ?>
 <div class="modal-body">
 	<div class="msj"></div>
 	<form action="" class="op_ins_enf">	
@@ -18,14 +18,14 @@ $r = $mconsulta->poride($ide) ?>
 		
 		<div class="clearfix"></div>
 	
-		<input type="hidden" class="form-control" name="ide" value="<?php echo $r[0]->cons_ide ?>">
+		<input type="hidden" class="form-control" name="cons_ide" value="<?php echo $ide ?>">
 	</form>
 	<div class="lista_enf"></div>
 </div>
 <?php echo $fn->modalFooter(2); ?>
 <script>
 	load('vst-consulta-select.enfer','','.selenf');
-	load('vst-consulta-lista_enfer','ide=<?php echo $r[0]->cons_ide; ?>','.lista_enf');
+	load('vst-consulta-lista_enfer','ide=<?php echo $ide; ?>','.lista_enf');
 
 </script>
 <script>
@@ -62,10 +62,11 @@ $r = $mconsulta->poride($ide) ?>
 
 			submitHandler: function (form) {
 			
-				$.post('prc-mconsulta-insert_enfermedad',$(formulario).serialize(),function(data){
+				$.post('prc-mconsulta-insert_consenf',$(formulario).serialize(),function(data){
 
 					if(!isNaN(data)) {
-						load('vst-constulta-lista_enf','','.lista_enf');
+						/*load('vst-constulta-lista_enf','','.lista_enf');*/
+						load('vst-consulta-lista_enfer','ide=<?php echo $ide; ?>','.lista_enf');
 						if(confirm('Registro agregado correctamente.\n¿Desea agregar otro registro?')==true) {
 							$(formulario).each(function(){ this.reset() })
 						} else {

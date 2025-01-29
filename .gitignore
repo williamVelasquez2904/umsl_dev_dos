@@ -8,4 +8,5 @@
 error_log
 *revisar.php
 *.sql
+*.borrar.php
 /*.borrar

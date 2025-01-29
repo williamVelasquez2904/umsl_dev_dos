@@ -13,4 +13,4 @@
 	$(function(){
 		$('.chosen').chosen();
 	})
-</script> 
+</script>

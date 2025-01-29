@@ -7,7 +7,7 @@ $row = $mconsulta->listaporpaciente($pac_ide);
 		<table class="table table-hover table-bordered">
 			<thead>
 				<tr>
-					<th>Id 08 ..</th>
+					<th>Id 28-ene</th>
 					<th>FECHA</th>
 					<th>NOMBRE</th>
 					<th>CEDULA</th>

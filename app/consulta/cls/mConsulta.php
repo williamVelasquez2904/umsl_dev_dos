@@ -39,6 +39,13 @@
 
 	}
 
+	public function insert_consenf() { // para enfermedades reportadas en una consulta
+		$sql = "SELECT sf_consenf(?,?,?,?,?) AS res";
+		extract($_POST); 
+		$datos = array(0,$cons_ide,$enf_ide,1,$_SESSION['s_usua_ide']);
+		return Enlace::sql($sql,$datos,4,'res');
+	}
+
 	public function update() {
 
 		$sql = "SELECT sf_consulta(?,?,?,?,?,?,?,?) AS res";

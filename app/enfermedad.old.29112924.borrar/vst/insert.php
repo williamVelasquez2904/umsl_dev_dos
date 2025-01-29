@@ -9,24 +9,6 @@
 				<input type="text" class="form-control" name="des">
 			</div>
 		</div>
-		<div class="form-group">
-			<label for="" class="control-label col-sm-6 bolder">¿Amerita Notificar a INPSASEL?:</label>
-			<div class="col-sm-6">
-				<select name="noti" id="noti" class="form-control chosen" title="Notificar">
-					<option value="0" selected>NO</option>
-					<option value="1">SI</option>
-				</select>
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="" class="control-label col-sm-6 bolder">¿Amerita Certificar Discapacidad?:</label>
-			<div class="col-sm-6">
-				<select name="cert" id="cert" class="form-control chosen" title="Certificar">
-					<option value="0" selected>NO</option>
-					<option value="1">SI</option>
-				</select>
-			</div>
-		</div>
 	</div>
 	<?php echo $fn->modalFooter(1) ?>
 </form>

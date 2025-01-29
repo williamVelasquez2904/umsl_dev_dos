@@ -1,16 +1,15 @@
-<?php require '../../../cfg/base.php'; ?>
-<?php
-//var_dump($_POST);
-
-$row = $menfermedad->lista() ?>
-<?php if(count($row)>0): ?>
+<?php require '../../../cfg/base.php';
+$row = $menfermedad->lista();
+if(count($row)>0): ?>
 	<div class="table-responsive">
 		<table class="table table-hover table-bordered">
 			<thead>
 				<tr>
-					<th>Id</th>
-					<th>Enfermedad</th>
-					<th>Opciones</th>
+					<th width="5%">Id</th>
+					<th width="65%">Enfermedad</th>
+					<th width="10%">Amerita Notificar INPSASEL</th>
+					<th width="10%">Amerita Certificación Discapacidad</th>
+					<th width="10%">Opciones</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -18,7 +17,9 @@ $row = $menfermedad->lista() ?>
 					<tr>
 						<td align="center"><?php echo $r->enf_ide ?></td>
 						<td><?php echo $r->enf_descrip ?></td>
-						<td>
+						<td align="center"><?php echo $r->enf_noti_inpsasel_desc ?></td>
+						<td align="center"><?php echo $r->enf_certi_discapacidad_desc ?></td>
+						<td align="center">
 							<div class="btn-group">
 								<button class="btn btn-success btn-xs" title="Actualizar" onclick="modal('vst-enfermedad-update','ide=<?php echo $r->enf_ide ?>')">
 									<i class="fa fa-edit"></i>
