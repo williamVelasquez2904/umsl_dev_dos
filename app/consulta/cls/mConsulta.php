@@ -7,9 +7,14 @@
 		$sql = "SELECT * FROM vw_consulta WHERE cons_borrado=0 ORDER BY cons_ide DESC";
 		return Enlace::sql($sql,'',3,'');
 	}
-
 	public function poride($ide) {
 		$sql = "SELECT * FROM vw_consulta WHERE cons_ide=? AND cons_borrado=0 ORDER BY cons_ide";
+		$datos = array($ide);
+		return Enlace::sql($sql,$datos,3,'');
+	}
+
+	public function poride_enf($ide) {
+		$sql = "SELECT * FROM vw_cons_enf WHERE consenf_ide=? AND consenf_borrado=0 ORDER BY consenf_ide";
 		$datos = array($ide);
 		return Enlace::sql($sql,$datos,3,'');
 	}
@@ -44,6 +49,12 @@
 		extract($_POST); 
 		$datos = array(0,$cons_ide,$enf_ide,1,$_SESSION['s_usua_ide']);
 		return Enlace::sql($sql,$datos,4,'res');
+	}
+
+	public function delete_enfer(){
+		$sql = "SELECT sf_(?,?,?,?) AS res";
+		extract($_POST); $datos = array($ide,0,3,$_SESSION['s_clien_ide']);
+		return Enlace::sql($sql,$datos,1,'res');
 	}
 
 	public function update() {

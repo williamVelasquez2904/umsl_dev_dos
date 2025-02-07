@@ -1,6 +1,6 @@
 <?php require '../../../cfg/base.php'; ?>
 <form action="" class="op1 form-horizontal">
-	<?php echo $fn->modalHeader('Insertar Informe Epidemiologico') ?>
+	<?php echo $fn->modalHeader('[insertar.php].Insertar Informe Epidemiologico') ?>
 	<div class="modal-body">
 		<div class="msj"></div>
 		<div class="form-group">
@@ -17,7 +17,7 @@
 		<div class="form-group">
 			<label for="" class="control-label col-sm-3 bolder">Descripción:</label>
 			<div class="col-sm-9">
-				<input type="text" class="form-control" name="des" value="<?php echo $r->inforepi_descripcion ?>">
+				<input type="text" class="form-control" name="des" value="">
 			</div>
 		</div>
 		<div class="form-group">

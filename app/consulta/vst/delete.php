@@ -1,7 +1,7 @@
-<?php require '../../../cfg/base.php';
+<?php require '../../../cfg/base.php'; 
 foreach($mconsulta->poride($ide) as $r): ?>
 	<form action="" class="op3 form-horizontal">
-		<?php echo $fn->modalHeader('Borrar Empresa o Institución') ?>
+		<?php echo $fn->modalHeader('[delete.php] Borrar consulta') ?>
 		<div class="modal-body">
 			<div class="alert alert-danger">¿Realmente desea borrar el registro seleccionado?</div>
 			<div class="msj"></div>
@@ -75,9 +75,9 @@ foreach($mconsulta->poride($ide) as $r): ?>
 			},
 
 			submitHandler: function (form) {
-				$.post('prc-mcompania-delete',$(formulario).serialize(),function(data){
+				$.post('prc-mconsulta-delete',$(formulario).serialize(),function(data){
 					if(data==1) {
-						load('vst-compania-lista','','.lista');
+						load('vst-consulta-listaConsultas','','.lista');
 						alert('Registro eliminado correctamente');
 						cerrarmodal();
 					} else {

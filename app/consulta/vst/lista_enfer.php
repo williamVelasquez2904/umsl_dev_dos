@@ -9,7 +9,7 @@ $row = $menfermedad->porconsul($ide) // enfermedades reportadas en una consulta
 		<table class="table2 table-hover table-bordered " width="100%" align="center" >
 			<thead>
 				<tr>
-					<th>Id</th>
+					<th>Id 05feb</th>
 					<th>Enfermedad</th>
 					<th>Opción</th>
 				</tr>
@@ -21,10 +21,7 @@ $row = $menfermedad->porconsul($ide) // enfermedades reportadas en una consulta
 						<td><?php echo $r->enfermedad ?></td>
 						<td>
 							<div class="btn-group">
-								<button class="btn btn-success btn-xs" title="Actualizar" onclick="modal('vst-banco-update','ide=<?php echo $r->banco_ide ?>')">
-									<i class="fa fa-edit"></i>
-								</button>
-								<button class="btn btn-danger btn-xs" title="Borrar" onclick="modal('vst-banco-delete','ide=<?php echo $r->banco_ide ?>')">
+								<button class="btn btn-danger btn-xs" title="Borrar" onclick="modal('vst-consulta-delete_enf','ide=<?php echo $r->consenf_ide ?>')">
 									<i class="fa fa-trash"></i>
 								</button>
 							</div>
