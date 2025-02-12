@@ -10,6 +10,7 @@ $archivos = array(
 		'usuarios'  =>array('mUsuarios','cUsuarios'),
 		'consulta'  =>array('mConsulta','cConsulta'),		
 		'enfermedad'=>array('mEnfermedad','cEnfermedad'),
+		'cargo'     =>array('mCargo','cCargo'),
 		'tipclien'  =>array('mTipclien','cTipclien'),
 		'tipousua'  =>array('mTipousua','cTipousua'),
 		'permisos'  =>array('mPermisos','cPermisos'),
@@ -22,7 +23,7 @@ $archivos = array(
 		'tienda'    =>array('mTienda','cTienda'),
 		'inforepi'  =>array('mInforepi','cInforepi'),
 		'reportes'  =>array('mReportes','cReportes'),
-		'motivo'  =>array('mMotivo','cMotivo'),
+		'motivo'    =>array('mMotivo','cMotivo'),
 		'auditoria' =>array('mAuditoria','cAuditoria')
 	);
 # Instanciacin de clases

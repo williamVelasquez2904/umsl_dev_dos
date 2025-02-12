@@ -1,7 +1,7 @@
 <?php require '../../../cfg/base.php'; 
 echo $fn->modalWidth('80%');
 $r = $mconsulta->poride($ide) ?>
-<?php echo $fn->modalHeader("[verdetalles.php] 04-02-25 Detalles Consulta <b> $ide</b>") ?>
+<?php echo $fn->modalHeader("[verdetalles.php] 05-02-25 Detalles Consulta <b> $ide</b>") ?>
 <div class="modal-body">
 	<div class="msj"></div>
 	<form action="" class="op_ins_enf">	
