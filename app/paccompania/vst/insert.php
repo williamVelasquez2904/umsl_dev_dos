@@ -18,8 +18,19 @@ extract($_POST);
 				</select>
 			</div>
 		</div>
-		<input type="text" class="form-control" name="pac_ide" value="<?php echo $pac_ide ?>">			
 
+		<div class="form-group">
+			<label for="" class="label control-label col-sm-3 bolder">Cargo</label>
+			<div class="col-sm-9" id="cargo_ide">
+				<select class="form-control chosen" title="Cargo" name="cargo_ide" id="cargo_ide">
+					<option value=""></option>
+					<?php foreach($mcargo->lista() as $c): ?>
+						<option value="<?php echo $c->cargo_ide ?>"><?php echo $c->cargo_descrip ?></option>
+					<?php endforeach; ?>
+				</select>
+			</div>
+		</div>
+		<input type="hidden" class="form-control" name="pac_ide" value="<?php echo $pac_ide ?>">
 	</div>
 	<?php echo $fn->modalFooter(1) ?>
 </form>

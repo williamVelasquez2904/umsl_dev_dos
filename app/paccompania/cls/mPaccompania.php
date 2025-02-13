@@ -10,9 +10,9 @@
 	}
 
  	public function insert() {
-		$sql = "SELECT sf_paccompania(?,?,?,?,?) AS res";
+		$sql = "SELECT sf_paccompania(?,?,?,?,?,?) AS res";
 		extract($_POST);
-		$datos = array(0,$pac_ide,$cia_ide,1,$_SESSION['s_usua_ide']);
+		$datos = array(0,$pac_ide,$cia_ide,$cargo_ide,1,$_SESSION['s_usua_ide']);
 		return Enlace::sql($sql,$datos,4,'res');
 
 		

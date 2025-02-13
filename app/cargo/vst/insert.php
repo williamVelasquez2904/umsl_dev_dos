@@ -47,7 +47,7 @@
 			submitHandler: function (form) {
 				$.post('prc-mcargo-insert',$(formulario).serialize(),function(data){
 					if(!isNaN(data)) {
-						load('vst-banco-lista','','.lista');
+						load('vst-cargo-lista','','.lista');
 						if(confirm('Registro agregado correctamente.\n¿Desea agregar otro registro?')==true) {
 							$(formulario).each(function(){ this.reset() })
 						} else {
