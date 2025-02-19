@@ -6,9 +6,18 @@
 </li>
 <?php foreach($musuarios->modulos($s_tius_ide) as $m): ?>
 	<li class="<?php echo $rowt[0]->empresa_col_ele_menu ?>">
+<!-- 		<a class="dropdown-toggle" href="#" data-toggle="dropdown">
+			<i class="fa fa-<?php //echo $m->modu_icono; ?> fa-lg"></i> 
+			<?php 
+			//echo 
+			//$cadena = mb_convert_encoding($m->modu_descrip, 'UTF-8', 'auto');
+			//$cadena = funciones::properText($m->modu_descrip);
+			//echo $cadena; ?>
+			<i class="icon-caret-down"></i>
+		</a> -->
 		<a class="dropdown-toggle" href="#" data-toggle="dropdown">
 			<i class="fa fa-<?php echo $m->modu_icono; ?> fa-lg"></i> 
-			<?php echo $m->modu_descrip ?>
+			<?php echo funciones::properText($m->modu_descrip); ?>
 			<i class="icon-caret-down"></i>
 		</a>
 		<ul class="user-menu pull-right dropdown-menu dropdown-<?php echo $rowt[0]->empresa_col_ele_menu_alt ?> dropdown-caret dropdown-close">
@@ -16,7 +25,11 @@
 				<li>
 					<a href="?var=<?php echo base64_encode($s->sumo_ide) ?>">
 						<i class="fa fa-<?php echo $s->sumo_icono; ?>"></i>
-						<span class="hidden-480"><?php echo $s->sumo_descrip ?></span>
+						<span class="hidden-480"><?php
+						$cadena = mb_convert_encoding($s->sumo_descrip, 'UTF-8', 'auto');
+						//$cadena_limpia = preg_replace('/[^\p{L}\p{N}\s]/u', '', $cadena);
+						$cadena_limpia = preg_replace('/[^\p{L}\p{N}\s\.\,\!\¿\?\¡]/u', '', $cadena);
+						 echo $cadena_limpia; ?></span>
 					</a>
 				</li>
 			<?php endforeach; ?>

@@ -1,10 +1,10 @@
 <?php require '../../../cfg/base.php'; ?>
 <form action="" class="op1 form-horizontal">
-	<?php echo $fn->modalHeader('Agregar cargo') ?>
+	<?php echo $fn->modalHeader('17.02.2025 Agregar cargo') ?>
 	<div class="modal-body">
 		<div class="msj"></div>
 		<div class="form-group">
-			<label for="" class="control-label col-sm-3 bolder">cargo:</label>
+			<label for="" class="control-label col-sm-3 bolder">Cargo:</label>
 			<div class="col-sm-9">
 				<input type="text" class="form-control" name="des">
 			</div>
